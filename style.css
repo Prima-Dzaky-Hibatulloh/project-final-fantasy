@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    background-image: url(bg1.jpg);
+}
+
+.container {
+    margin: auto;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 20px;
+}
