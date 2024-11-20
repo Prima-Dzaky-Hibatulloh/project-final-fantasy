@@ -1,11 +1,21 @@
 body {
     margin: 0;
-    background-image: url(bg1.jpg);
+    background-image: url(asset/bg1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .container {
-    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 40%;
+    width: 300px;
+    padding: 12px;
+    color: #fff;
     border-style: solid;
-    border-color: #fff;
+    border-color: #bcbcbc;
     border-radius: 20px;
+    background-color: rgba(217, 217, 217, 0.2);
 }
+
