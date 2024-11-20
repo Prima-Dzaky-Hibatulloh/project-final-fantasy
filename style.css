@@ -5,12 +5,20 @@ body {
     background-size: cover;
 }
 
+.icon {
+    position: absolute;
+    width: 60px;
+    top: 18%;
+    left: 49.5%;
+    z-index: 1;
+}
+
 .container {
     position: absolute;
     text-align: center;
-    top: 30%;
-    left: 40%;
-    width: 300px;
+    top: 23%;
+    left: 35%;
+    width: 400px;
     padding: 12px;
     color: #fff;
     border-style: solid;
@@ -19,3 +27,54 @@ body {
     background-color: rgba(217, 217, 217, 0.2);
 }
 
+.container h2 {
+    font-family: Cambria Math;
+    color: #10B9D8;
+}
+
+.container form{
+    text-align: left;
+    font-family: Abril Fatface;
+}
+
+.container p {
+    font-weight: bold;
+}
+
+.container a {
+    color: #FFC107;
+}
+
+.container i {
+    margin-right: 5px;
+}
+
+.container input[type="text"], input[type="password"] {
+    width: 307px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #BCBEC0;
+    background-color: #0A334280;
+}
+
+.container input[type="submit"] {
+    color: #fff;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #10B9D8, #086172);
+    font-family: Abril Fatface;
+    width: 228px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.login-section {
+    margin-left: 42px;
+}
+
+.login-section input[type="submit"]{
+    margin-left: 44px;
+}
