@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    background-image: url(asset-login-register/bg-reset.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'SDDystopianDemo';
+    src: url('font/Sddystopiandemo-GO7xa.otf') format('opentype');
+}
+
+.icon {
+    position: absolute;
+    width: 60px;
+    top: 17%;
+    left: 48.5%;
+    z-index: 1;
+}
+
+.container {
+    position: absolute;
+    text-align: center;
+    top: 23%;
+    left: 30%;
+    width: 500px;
+    padding: 12px;
+    color: #fff;
+    border-style: solid;
+    border-color: #bcbcbc;
+    border-radius: 20px;
+    background-color: rgba(217, 217, 217, 0.2);
+}
+
+.container h2 {
+    font-family: Cambria Math;
+    color: #FFC107;
+}
+
+.container form{
+    text-align: left;
+    font-family: Abril Fatface;
+}
+
+.container p {
+    font-weight: normal;
+}
+
+.container a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.container i {
+    margin-right: 5px;
+}
+
+.container input[type="text"], input[type="password"] {
+    width: 407px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #BCBEC0;
+    background-color: #0A334280;
+}
+
+.container input[type="submit"] {
+    color: #fff;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    background: #FFC107;
+    font-family: Abril Fatface;
+    width: 228px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.container .reset{
+    color: #fff;
+    margin-left: 175px;
+}
+
+.login-section {
+    margin-left: 42px;
+}
+
+.login-section input[type="submit"]{
+    margin-left: 94px;
+}

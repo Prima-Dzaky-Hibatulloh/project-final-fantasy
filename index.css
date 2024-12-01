@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    background-image: url(asset-login-register/bg-landing-page.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'SDDystopianDemo';
+    src: url('font/Sddystopiandemo-GO7xa.otf') format('opentype');
+}
+
+.container {
+    position: absolute;
+    text-align: center;
+    top: 12%;
+    left: 8%;
+}
+
+img {
+    width: 250px;
+}
+
+.p1 {
+    font-family: 'SDDystopianDemo';
+    font-size: 40px;
+    color: #fff;
+}
+
+.p2 {
+    font-family: 'SDDystopianDemo';
+    font-size: 54px;
+    color: #07102E;
+}
+
+.masuk {
+    font-size: 20px;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #05254D;
+    margin-right: 100px;
+}
+
+.daftar {
+    font-size: 20px;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #05254D;
+}

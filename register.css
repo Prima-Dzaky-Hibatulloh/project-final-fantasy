@@ -1,24 +1,29 @@
 body {
     margin: 0;
-    background-image: url(asset/bg1.jpg);
+    background-image: url(asset-login-register/bg-buat-akun.jpeg);
     background-attachment: fixed;
     background-size: cover;
+}
+
+@font-face {
+    font-family: 'SDDystopianDemo';
+    src: url('font/Sddystopiandemo-GO7xa.otf') format('opentype');
 }
 
 .icon {
     position: absolute;
     width: 60px;
-    top: 18%;
-    left: 49.5%;
+    top: 6%;
+    left: 48.5%;
     z-index: 1;
 }
 
 .container {
     position: absolute;
     text-align: center;
-    top: 23%;
-    left: 35%;
-    width: 400px;
+    top: 12%;
+    left: 30%;
+    width: 500px;
     padding: 12px;
     color: #fff;
     border-style: solid;
@@ -32,6 +37,15 @@ body {
     color: #10B9D8;
 }
 
+.container note {
+    margin: 0;
+    font-size: 10px;
+    margin-left: 50px;
+    color: #FFC107;
+    font-weight: lighter;
+    font-style: italic;
+}
+
 .container form{
     text-align: left;
     font-family: Abril Fatface;
@@ -43,6 +57,7 @@ body {
 
 .container a {
     color: #FFC107;
+    text-decoration: none;
 }
 
 .container i {
@@ -50,7 +65,7 @@ body {
 }
 
 .container input[type="text"], input[type="password"] {
-    width: 307px;
+    width: 407px;
     height: 30px;
     border-style: solid;
     border-radius: 10px;
@@ -76,5 +91,5 @@ body {
 }
 
 .login-section input[type="submit"]{
-    margin-left: 44px;
+    margin-left: 94px;
 }
