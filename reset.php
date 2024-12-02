@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <title>Login</title>
 </head>
@@ -12,7 +11,7 @@
         <p>Silahkan masukan Username dan Email anda untuk mengonfirmasi bahwa akun tersebut milik anda</p>
         <section class="login-section">
         <form method="POST" action="">
-            <label><i class="fas fa-user"></i>Email</label><br>
+            <label>Email</label><br>
             <input type="text" name="email" required><br><br>
             <label>Username</label><br>
             <input type="text" name="username" required><br><br>

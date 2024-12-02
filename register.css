@@ -10,6 +10,16 @@ body {
     src: url('font/Sddystopiandemo-GO7xa.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'MouldyCheese';
+    src: url('font/MouldyCheeseRegular-WyMWG.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SunnySpells';
+    src: url('font/SunnySpellsBasicRegular-Yz1Wv.ttf') format('trutype');
+}
+
 .icon {
     position: absolute;
     width: 60px;
@@ -29,18 +39,18 @@ body {
     border-style: solid;
     border-color: #bcbcbc;
     border-radius: 20px;
-    background-color: rgba(217, 217, 217, 0.2);
+    background-color: rgba(95, 95, 95, 0.5);
 }
 
 .container h2 {
-    font-family: Cambria Math;
+    font-family: 'SunnySpells';
     color: #10B9D8;
 }
 
 .container note {
     margin: 0;
-    font-size: 10px;
-    margin-left: 50px;
+    font-size: 8px;
+    margin-left: 67px;
     color: #FFC107;
     font-weight: lighter;
     font-style: italic;
@@ -48,7 +58,7 @@ body {
 
 .container form{
     text-align: left;
-    font-family: Abril Fatface;
+    font-family: 'MouldyCheese';
 }
 
 .container p {
@@ -58,10 +68,6 @@ body {
 .container a {
     color: #FFC107;
     text-decoration: none;
-}
-
-.container i {
-    margin-right: 5px;
 }
 
 .container input[type="text"], input[type="password"] {

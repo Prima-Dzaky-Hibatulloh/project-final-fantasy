@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Alatsi';
+    src: url('font/Alatsi-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+}
+
+p {
+    font-family: 'Alatsi';
+}

@@ -10,6 +10,11 @@ body {
     src: url('font/Sddystopiandemo-GO7xa.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.ttf') format('truetype');
+}
+
 .container {
     position: absolute;
     text-align: center;
@@ -19,6 +24,16 @@ body {
 
 img {
     width: 250px;
+}
+
+button {
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 30px #06080F;
 }
 
 .p1 {
@@ -34,20 +49,10 @@ img {
 }
 
 .masuk {
-    font-size: 20px;
-    color: #fff;
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
     background-color: #05254D;
     margin-right: 100px;
 }
 
 .daftar {
-    font-size: 20px;
-    color: #fff;
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
     background-color: #05254D;
 }
