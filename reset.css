@@ -28,16 +28,17 @@ body {
 .icon {
     position: absolute;
     width: 60px;
-    top: 17%;
-    left: 48.5%;
+    top: 10%;
+    left: 48%;
     z-index: 1;
 }
 
 .container {
     position: absolute;
     text-align: center;
-    top: 23%;
-    left: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 500px;
     padding: 12px;
     color: #fff;

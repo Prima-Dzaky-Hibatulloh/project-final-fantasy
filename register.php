@@ -14,7 +14,7 @@
             <input type="text" name="email" required><br><br>
             <label>Username</label><br>
             <input type="text" name="username" required><br><br>
-            <label>Kata Sandi<note>*minimal 8 karakter, gunakan angka dan simbol untuk keamanan extra</note></label><br>
+            <label>Kata Sandi<span>*minimal 8 karakter, gunakan angka dan simbol untuk keamanan extra</span></label><br>
             <input type="password" name="password" required><br><br>
             <label>Konfirmasi Ulang Kata Sandi</label><br>
             <input type="password" name="cek-password" required><br><br>

@@ -10,7 +10,7 @@
     <h1 class="p1">FINAL FANSTASY VII REBIRTH: LEGENDA RPG TAK TERLUPAKAN</h1>
     <h1 class="p2">MARI BERGABUNG!</h1>
     <a href="login.php"><button class="masuk">Masuk Akun</button></a>
-    <a href="register.php"><button class="daftar">Daftar Akun</button></a>
+    <a href="register.php"><button>Daftar Akun</button></a>
     </div>
 </body>
 </html>

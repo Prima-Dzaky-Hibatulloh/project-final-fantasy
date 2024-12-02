@@ -6,9 +6,9 @@
 </head>
 <body>
     <div class="container">
-    <img src="asset-halman-utama/logo-game.png">
-    <h2>Selamat Datang, <!--php-->!</h2>
-    <a href="">MULAI PETUALANGANMU<a>
+        <img src="asset-halman-utama/logo-game.png">
+        <h2>Selamat Datang, <!--php-->!</h2>
+        <a href="mainpage.php">MULAI PETUALANGANMU</a>
     </div>
 </body>
 </html>

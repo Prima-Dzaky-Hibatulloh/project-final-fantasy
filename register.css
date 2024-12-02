@@ -23,16 +23,17 @@ body {
 .icon {
     position: absolute;
     width: 60px;
-    top: 6%;
-    left: 48.5%;
+    top: 3%;
+    left: 48%;
     z-index: 1;
 }
 
 .container {
     position: absolute;
     text-align: center;
-    top: 12%;
-    left: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 500px;
     padding: 12px;
     color: #fff;
@@ -47,7 +48,7 @@ body {
     color: #10B9D8;
 }
 
-.container note {
+.container span {
     margin: 0;
     font-size: 8px;
     margin-left: 67px;

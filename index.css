@@ -34,6 +34,12 @@ button {
     height: 50px;
     border-radius: 10px;
     box-shadow: 0px 4px 30px #06080F;
+    background-color: #05254D;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #041b38;
 }
 
 .p1 {
@@ -49,10 +55,5 @@ button {
 }
 
 .masuk {
-    background-color: #05254D;
     margin-right: 100px;
-}
-
-.daftar {
-    background-color: #05254D;
 }
