@@ -96,3 +96,9 @@ body {
 .login-section input[type="submit"]{
     margin-left: 94px;
 }
+
+font {
+    margin: 0;
+    color: red;
+    font-size: 10px;
+}
