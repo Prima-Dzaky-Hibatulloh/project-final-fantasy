@@ -98,5 +98,27 @@ body {
 }
 
 .login-section input[type="submit"]{
-    margin-left: 94px;
+    margin-left: 44px;
+}
+
+.alert {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+font {
+    margin: 0;
+    color: red;
+    font-size: 10px;
+}
+
+.success {
+    background-color: #4bb543;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 40px;
+    width: 407px;
+    margin-bottom: 10px;
 }
