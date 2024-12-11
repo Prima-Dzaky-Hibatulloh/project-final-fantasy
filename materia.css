@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Alegreya';
+    src: url('font/Alegreya-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AlegreyaSC';
+    src: url('font/AlegreyaSC-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.ttf') format('truetype');
+}
+
+body{
+    margin: 0;
+    background-image: linear-gradient(#000000, #0f2261, #000000);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'AlegreyaSC';
+    text-align: center;
+    margin: 0 0;
+}
+
+h2{
+    color: #fff;
+    font-family: 'Alegreya';
+    text-align: center;
+    margin-top: 0;
+}
+
+.container{
+    display: flex;
+    gap: 100px;
+    margin: 0 230px;
+}
+
+.materia-block{
+    place-items: center;
+}
+
+.materia-block h2{
+    font-family: 'Poppins';
+}
+
+.materia-block img{
+    padding: 15px;
+    width: 50px;
+}
+
+.materia-card{
+    background-color: rgba(54, 54, 54, 0.4);
+    border: none;
+    border-radius: 5px;
+}
+
+.hijau{
+    box-shadow: 0 4px 4px #2FFF00;
+}
+
+.merah{
+    box-shadow: 0 4px 4px #FF0000;
+}
+
+.kuning{
+    box-shadow: 0 4px 4px #E2D928;
+}
+
+.biru{
+    box-shadow: 0 4px 4px #0733F4;
+}
+
+.ungu{
+    box-shadow: 0 4px 4px #E63AE5;
+}
+
+.result-block{
+    place-items: center;
+}
+
+.result-block h2{
+    color: #FEA33C;
+    font-family: 'Alegreya';
+}
+
+.materia-box{
+    display: flex;
+    gap: 20px;
+}
+
+.materia-choice{
+    background-color: rgba(54, 54, 54, 0.4);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 4px #fff;
+}
+
+.materia-choice img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.tambah{
+    background-color: #E2D928;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.result-box{
+    background-color: #07102E;
+    margin-top: 40px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #fff;
+}
+
+.combine-btn{
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Alegreya';
+    font-weight: bold;
+    background-color: #FFC107;
+    border-style: none;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    margin-top: 40px;
+}

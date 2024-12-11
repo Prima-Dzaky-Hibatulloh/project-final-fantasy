@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Alegreya';
+    src: url('font/Alegreya-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Caudex';
+    src: url('font/Caudex-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MouldyCheese';
+    src: url('font/MouldyCheeseRegular-WyMWG.ttf') format('truetype');
+}
+
+body{
+    margin: 0;
+    background-image: linear-gradient(#000000, #272834, #000000);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    color: #fff;
+    font-family: 'Alegreya';
+}
+
+h3{
+    color: #fff;
+    font-family: 'Caudex';
+}
+
+p{
+    color: #fff;
+    font-family: 'MouldyCheese';
+}
+
+.container{
+    place-items: center;
+    text-align: center;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.map-card{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.grassland{
+    border-color: #888853;
+}
+
+.underjunon{
+    border-color: #CCA293;
+}
+
+.junon{
+    border-color: #AC6129;
+}
+
+.corel{
+    border-color: #AAB9E2;
+}
+
+.gold{
+    border-color: #E2D928;
+}
+
+.kalm{
+    border-color: #B89168;
+}
+
+.mythrill{
+    border-color: #148EB8;
+}
+
+.shinra{
+    border-color: #00A123;
+}
+
+.costa{
+    border-color: #DCB687;
+}
+
+img{
+    margin: 10px 20px;
+    width: 300px;
+}
+
+button{
+    color: #fff;
+    font-family: 'Caudex';
+    font-weight: bold;
+    background-color: #042D6F;
+    border-style: none;
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+}
