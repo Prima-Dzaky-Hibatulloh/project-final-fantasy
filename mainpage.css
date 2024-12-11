@@ -1,12 +1,337 @@
 @font-face {
-    font-family: 'Alatsi';
-    src: url('font/Alatsi-Regular.ttf') format('truetype');
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SDDystopianDemo';
+    src: url('font/Sddystopiandemo-GO7xa.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('font/Alegreya-VariableFont_wght.ttf') format('opentype');
 }
 
 * {
     margin: 0;
 }
 
-p {
-    font-family: 'Alatsi';
+.section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+/*SINOPSIS SECTION*/
+.sinopsis-container {
+    background-image: url(asset-sinopsis/bg-sinopsis.jpeg);
+}
+
+.sinopsis-container .profil-box{
+    position: absolute;
+    background-color: #FFC107;
+    padding: 12px 16px;
+    width: 200px;
+    top: 25px;
+    right: 25px;
+    border-radius: 30px;
+}
+
+.sinopsis-container .profil{
+    color: #fff;
+    font-size: 17px;
+}
+
+.sinopsis-container .foto-profil{
+    float: left;
+    width: 37px;
+    margin: 0;
+    padding-right: 12px;
+}
+
+.sinopsis-container .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 28px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 120px;
+}
+  
+.sinopsis-container .dropdown-content a {
+    color: #fff;
+    border: 1px solid #FFC107;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.profil-box:hover .dropdown-content{
+    display: block;
+}
+
+.sinopsis-container img{
+    width: 200px;
+    margin: 25px 50px;
+}
+
+.sinopsis-container .penjelasan{
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: left;
+    width: 450px;
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+}
+
+.sinopsis-container h1{
+    font-family: 'SDDystopianDemo';
+    color: #FF0000;
+    font-size: 60px;
+}
+
+.sinopsis-container p{
+    font-family: 'Poppins';
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+}
+
+/*KARAKTER SECTION*/
+.karakter-container {
+    background-image: url(asset-karakter/bg-karakter.png);
+}
+
+.karakter-container .karakter-desc{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    padding: 12px;
+    width: 300px;
+    top: 50px;
+    left: 40px;
+}
+
+.karakter-container h1{
+    margin-bottom: 7px;
+    font-size: 40px;
+    font-family: 'Alegreya';
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0);
+}
+
+.karakter-container p{
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+}
+
+.karakter-container button{
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: #042D6F;
+    border-style: none;
+    width: 150px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.karakter-container img{
+    width: 760px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*MAP SECTION*/
+.map-container {
+    background-image: url(asset-map/bg-map.png);
+    place-items: center;
+}
+
+.map-container h1{
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: 'Alegreya';
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0);
+}
+
+.map-container p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins';
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+}
+
+.map-container button{
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #042D6F;
+    border-style: none;
+    width: 270px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.map-container img{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+    width: 450px;
+    margin: 30px 50px;
+}
+
+/*KISAH SECTION*/
+.kisah-container {
+    background-image: url(asset-kisah/bg.png);
+    place-items: center;
+}
+
+.kisah-container h1{
+    margin-top: 50px;
+    font-size: 60px;
+    font-family: 'Alegreya';
+    color: #FFC107;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0);
+}
+
+.kisah-container h2{
+    font-family: 'Alegreya';
+    color: #FFC107;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0);
+}
+
+.kisah-container .kisah-display{
+    width: 800px;
+    margin: 30px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.kisah-container p{
+    padding: 12px;
+    font-family: 'Poppins';
+    color: #fff;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0);
+}
+
+.kisah-container img{
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+    width: 400px;
+    margin-right: 25px;
+}
+
+.kisah-container button{
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: #042D6F;
+    border-style: none;
+    width: 150px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+/*MATERIA SECTION*/
+.materia-container {
+    background-image: url(asset-materia/bg.jpeg);
+    place-items: center;
+}
+
+.materia-container h1{
+    margin-top: 12px;
+    font-size: 60px;
+    font-family: 'Alegreya';
+    color: #FFC107;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0);
+}
+
+.materia-container h4{
+    margin-bottom: 7px;
+}
+
+.materia-container .materia-display{
+    display: flex;
+}
+
+.materia-container .materia-card{
+    margin: 7px;
+    padding: 12px;
+    place-items: center;
+    text-align: center;
+    width: 134px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.materia-container .materia-ungu{
+    background-color: #400042;
+}
+
+.materia-container .materia-kuning{
+    background-color: #A27A00;
+}
+
+.materia-container .materia-hijau{
+    background-color: #15434F;
+}
+
+.materia-container .materia-biru{
+    background-color: #0323b0;
+}
+
+.materia-container .materia-merah{
+    background-color: #a10000;
+}
+
+.materia-container img{
+    width: 80px;
+    padding: 7px;
+}
+
+.materia-container button{
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: #042D6F;
+    border-style: none;
+    width: 270px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+/*FOOTER*/
+.footer {
+    height: 15vh;
+    background-image: linear-gradient(#000000, #07102E);
+    place-items: center;
+    color: #fff;
+}
+
+.footer .content{
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer .copyright{
+    margin-top: 12px;
+}
+
+.footer img{
+    width: 80px;
+    padding-right: 10px;
 }
