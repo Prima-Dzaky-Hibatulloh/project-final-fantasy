@@ -19,5 +19,37 @@
         </section>
         <p><a href="login.php">Kembali Ke Menu Login</a></p>
     </div>
+
+    <!--ALERT CUSTOM-->
+    <div id="alertSuccess" class="success hidden">
+    <h1>AKUN ANDA TERSEDIA</h1>
+    <a href="gantiPassword.php"><button>Ganti</button></a>
+    </div>
+    
+    <div id="alertFail" class="fail hidden">
+    <h1>INVALID PASSWORD</h1>
+    <button id="closeAlert">Back</button>
+    </div>
+
+    <!--ALERT JS-->
+    <script>
+        const successAlert = document.getElementById('alertSuccess');
+        const failAlert = document.getElementById('alertFail');
+        const closeAlert = document.getElementById('closeAlert');
+        
+        //Kalau Berhasil
+        function regisSuccess(){
+            successAlert.classList.remove('hidden');
+        }
+
+        //Kalau Gagal
+        function regisFail(){
+            failAlert.classList.remove('hidden');
+        }
+        //button buat balik di alertFail
+        closeAlert.addEventListener("click", function(){
+            failAlert.classList.add('hidden')
+        })
+    </script>
 </body>
 </html>

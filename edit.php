@@ -24,9 +24,28 @@
             <input type="text" name="username" required><br><br>
             <label>Email:</label><br>
             <input type="text" name="email" required><br><br>
-            <label>Password:</label><br>
-            <input type="password" name="password" required><br><br>
+            <a href="reset.php">Klik disini untuk mengganti Password anda</a><br><br>
             <input type="submit" name="submit" value="Simpan"><br>
         </section>
+
+    <!--ALERT-->
+    <div id="alertCust" class="success hidden">
+    <h1>Data Berhasil Diubah</h1>
+    <button id="closeAlert">OK</button>
+    </div>
+
+    <!--ALERT JS-->
+    <script>
+        const custAlert = document.getElementById('alertCust');
+        const closeAlert = document.getElementById('closeAlert');
+
+        function regisFail(){
+            custAlert.classList.remove('hidden');
+        }
+        //button buat balik di alert
+        closeAlert.addEventListener("click", function(){
+            custAlert.classList.add('hidden')
+        })
+    </script>
 </body>
 </html>

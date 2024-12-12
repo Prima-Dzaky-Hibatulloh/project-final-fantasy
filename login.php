@@ -88,7 +88,7 @@
     </div>
 
     <!--ALERT-->
-    <div id="alertFail" class="fail">
+    <div id="alertFail" class="fail hidden">
     <h1>INVALID PASSWORD</h1>
     <button id="closeAlert">Back</button>
     </div>

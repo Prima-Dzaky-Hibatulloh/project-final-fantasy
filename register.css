@@ -146,8 +146,11 @@ body {
     padding: 7px 18px;
 }
 
-.fail {
+.hidden{
     display: none;
+}
+
+.fail {
     position: absolute;
     text-align: center;
     top: 50%;
