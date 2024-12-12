@@ -86,5 +86,25 @@
         </section>
         <p>Belum Punya Akun? <a href="register.php">Registrasi</a></p>
     </div>
+
+    <!--ALERT-->
+    <div id="alertFail" class="fail">
+    <h1>INVALID PASSWORD</h1>
+    <button id="closeAlert">Back</button>
+    </div>
+
+    <!--ALERT JS-->
+    <script>
+        const failAlert = document.getElementById('alertFail');
+        const closeAlert = document.getElementById('closeAlert');
+
+        function regisFail(){
+            failAlert.classList.remove('hidden');
+        }
+        //button buat balik di alert
+        closeAlert.addEventListener("click", function(){
+            failAlert.classList.add('hidden')
+        })
+    </script>
 </body>
 </html>

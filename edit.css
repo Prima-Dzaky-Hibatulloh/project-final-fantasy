@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Alegreya';
+    src: url('font/Alegreya-VariableFont_wght.ttf') format('opentype');
+}
+
+body {
+    margin: 0;
+    background-image: url(asset-login-register/bg-edit-data-user.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.upper-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.profil-box{
+    position: absolute;
+    background-color: #FFC107;
+    padding: 12px 16px;
+    top: 25px;
+    right: 25px;
+    border-radius: 30px;
+}
+
+.profil{
+    color: #000000;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.foto-profil{
+    float: left;
+    width: 37px;
+    margin: 0;
+    padding-right: 12px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 28px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 120px;
+}
+  
+.dropdown-content a {
+    color: #fff;
+    border: 1px solid #FFC107;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.profil-box:hover .dropdown-content{
+    display: block;
+}
+
+.logo{
+    width: 200px;
+    margin: 25px 50px;
+    filter: drop-shadow(0 4px 4px rgba(0 0 0 ));
+}
+
+.icon {
+    position: absolute;
+    width: 60px;
+    top: 70px;
+    left: 48%;
+    z-index: 1;
+}
+
+.container {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px 52px;
+    color: #FEA33C;
+    border-style: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 38px #fff inset;
+}
+
+.container h2 {
+    font-family: 'Alegreya';
+    color: #10B9D8;
+}
+
+.container form{
+    text-align: left;
+    font-family: 'Alegreya';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container p {
+    font-weight: bold;
+}
+
+.container input[type="text"], input[type="password"] {
+    width: 277px;
+    height: 20px;
+    border-style: none;
+    background-color: #1a5b7280;
+}
+
+.container input[type="submit"] {
+    color: #fff;
+    font-size: 18px;
+    border-style: none;
+    border-radius: 10px;
+    background: #E4582C;
+    font-family: 'Alegreya';
+    width: 120px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.login-section input[type="submit"]{
+    margin-left: 83px;
+    margin-bottom: 40px;
+}

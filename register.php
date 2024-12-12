@@ -63,8 +63,8 @@
             <label>Username</label><br>
             <input type="text" name="username" required><br>
             <?php if ($err2) echo $err2 . "<br>"; ?><br>
-            <label>Kata Sandi<note>*minimal 8 karakter, gunakan angka dan simbol untuk keamanan extra</note></label><br>
-            <input type="password" name="password" required><br><br>
+            <label>Kata Sandi<span>*minimal 8 karakter, gunakan angka dan simbol untuk keamanan extra</span></label><br>
+            <input type="password" name="password" required><br>
             <?php if ($err4) echo $err4 . "<br>"; ?><br>
             <label>Konfirmasi Ulang Kata Sandi</label><br>
             <input type="password" name="cek-password" required><br>
@@ -73,5 +73,15 @@
         </section>
         <p>Sudah Punya Akun? <a href="login.php">Masuk Disini</a></p>
     </div>
+
+        <div class="success">
+        <h1>BERHASIL!</h1>
+        <p>Silahkan tekan tombol dibawah untuk melanjutkan ke halaman login</p>
+        <button>Next</button>
+        </div>
+        <div class="fail">
+        <h1>INVALID PASSWORD</h1>
+        <button>Back</button>
+        </div>
 </body>
 </html>

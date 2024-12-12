@@ -10,7 +10,7 @@
         <div class="profil-box">
             <p class="profil"><img class="foto-profil" src="asset-sinopsis/logo-sinopsis.png">Halo, <!--php-->!</p>
             <div class="dropdown-content">
-                <a href="">Edit Profil</a>
+                <a href="edit.php">Edit Profil</a>
                 <a href="">Logout</a>
             </div>
         </div>

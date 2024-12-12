@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-image: url(asset-login-register/bg-admin.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo{
+    width: 200px;
+    margin: 25px 50px;
+    filter: drop-shadow(0 4px 4px rgb(255, 255, 255));
+}
+
+.profil-box{
+    display: flex;
+    position: absolute;
+    background-color: #FF0000;
+    padding: 12px 16px;
+    top: 25px;
+    right: 25px;
+    border-radius: 30px;
+}
+
+.foto-profil{
+    width: 50px;
+    margin: 0;
+    padding-right: 12px;
+}
+
+.nama-profil{
+    color: #fff;
+    font-size: 14px;
+}
+
+.table-section{
+    align-items: center;
+    justify-content: center;
+    margin-left: 370px;
+}
+
+table{
+    color: #fff;
+    background-color: #26264F;
+    justify-content: center;
+    border-spacing: 12px;
+    width: 60%;
+}

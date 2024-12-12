@@ -35,15 +35,15 @@
     position: absolute;
     background-color: #FFC107;
     padding: 12px 16px;
-    width: 200px;
     top: 25px;
     right: 25px;
     border-radius: 30px;
 }
 
 .sinopsis-container .profil{
-    color: #fff;
-    font-size: 17px;
+    color: #000000;
+    font-size: 16px;
+    text-shadow: none;
 }
 
 .sinopsis-container .foto-profil{
@@ -51,6 +51,7 @@
     width: 37px;
     margin: 0;
     padding-right: 12px;
+    filter: none;
 }
 
 .sinopsis-container .dropdown-content {
@@ -78,6 +79,7 @@
 .sinopsis-container img{
     width: 200px;
     margin: 25px 50px;
+    filter: drop-shadow(0 4px 4px rgba(0 0 0 ));
 }
 
 .sinopsis-container .penjelasan{
@@ -300,6 +302,7 @@
 .materia-container img{
     width: 80px;
     padding: 7px;
+    filter: drop-shadow(0 4px 4px rgba(0 0 0 ));
 }
 
 .materia-container button{
