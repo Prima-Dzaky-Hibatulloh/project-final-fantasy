@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="kisah.css">
+    <link rel="stylesheet" href="css/kisah.css">
     <title>Alur Cerita Final Fantasy VII</title>
 </head>
 <body>

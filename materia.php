@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="materia.css">
+    <link rel="stylesheet" href="css/materia.css">
     <title>Simulasi Kombinasi Materia</title>
 </head>
 <body>

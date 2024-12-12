@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="css/start.css">
     <title>WELCOME</title>
 </head>
 <body>

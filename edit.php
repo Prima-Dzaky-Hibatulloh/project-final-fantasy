@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="css/edit.css">
     <title>Document</title>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="css/map.css">
     <title>Map Final Fantasy VII</title>
 </head>
 <body>

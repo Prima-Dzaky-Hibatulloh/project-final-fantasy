@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="karakter.css">
+    <link rel="stylesheet" href="css/karakter.css">
     <title>Karakter Final Fantasy VII</title>
 </head>
 <body>

@@ -45,7 +45,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="register.css?v=1.0">
+    <link rel="stylesheet" href="css/register.css?v=1.0">
     <title>Registerasi</title>
 </head>
 <body>
