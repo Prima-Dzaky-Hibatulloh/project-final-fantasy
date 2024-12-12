@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url(asset-login-register/bg-login.png);
+    background-image: url(../asset-login-register/bg-login.png);
     background-attachment: fixed;
     background-size: cover;
 }

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url(asset-halman-utama/bg-utama.png);
+    background-image: url(../asset-halman-utama/bg-utama.png);
     background-attachment: fixed;
     background-size: cover;
 }

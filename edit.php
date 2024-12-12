@@ -27,7 +27,7 @@
             <a href="reset.php">Klik disini untuk mengganti Password anda</a><br><br>
             <input type="submit" name="submit" value="Simpan"><br>
         </section>
-
+    </div>
     <!--ALERT-->
     <div id="alertCust" class="success hidden">
     <h1>Data Berhasil Diubah</h1>

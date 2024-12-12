@@ -28,7 +28,7 @@
 
 /*SINOPSIS SECTION*/
 .sinopsis-container {
-    background-image: url(asset-sinopsis/bg-sinopsis.jpeg);
+    background-image: url(../asset-sinopsis/bg-sinopsis.jpeg);
 }
 
 .sinopsis-container .profil-box{
@@ -106,7 +106,7 @@
 
 /*KARAKTER SECTION*/
 .karakter-container {
-    background-image: url(asset-karakter/bg-karakter.png);
+    background-image: url(../asset-karakter/bg-karakter.png);
 }
 
 .karakter-container .karakter-desc{
@@ -153,7 +153,7 @@
 
 /*MAP SECTION*/
 .map-container {
-    background-image: url(asset-map/bg-map.png);
+    background-image: url(../asset-map/bg-map.png);
     place-items: center;
 }
 
@@ -195,7 +195,7 @@
 
 /*KISAH SECTION*/
 .kisah-container {
-    background-image: url(asset-kisah/bg.png);
+    background-image: url(../asset-kisah/bg.png);
     place-items: center;
 }
 
@@ -249,7 +249,7 @@
 
 /*MATERIA SECTION*/
 .materia-container {
-    background-image: url(asset-materia/bg.jpeg);
+    background-image: url(../asset-materia/bg.jpeg);
     place-items: center;
 }
 
