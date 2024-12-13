@@ -1,3 +1,42 @@
+<?php
+    require 'koneksi.php';
+    session_start();
+
+    $err = false;
+    $succes = false;
+    if (!isset($_SESSION['sesi_username'])) {
+        header("Location:login.php");
+    }else{
+        $user = $_SESSION['sesi_username'];
+        $token = $_GET['token'];
+        $sql = mysqli_query($koneksi, "SELECT token FROM account WHERE username = '$user'");
+        $q = mysqli_fetch_array($sql);
+
+        if ($token) {
+            if ($q['token'] === $token) {
+                if (isset($_POST['submit'])) {
+                    $pass = $_POST['password'];
+                    $pass2 = $_POST['confirmPassword'];
+            
+                    if ($pass === $pass2) {
+                        $password = password_hash($pass, PASSWORD_DEFAULT);
+                        $sqlquery = mysqli_query($koneksi, "UPDATE account SET password = '$password' WHERE username = '$user'");
+                        
+                        $succes = true;
+                    }else{
+                        $err = true;
+                    }
+                }
+            }else {
+                header("Location:reset.php");
+            }
+        }else{
+            header("Location:reset.php");
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +51,10 @@
         <section class="login-section">
         <form method="POST" action="">
             <label>Kata Sandi Baru</label><br>
-            <input type="text" name="password" required><br><br>
+            <input type="password" name="password" required><br><br>
             <label>Konfirmasi Ulang Kata Sandi</label><br>
-            <input type="text" name="confirmPassword" required><br><br>
-            <input type="submit" name="submit" value="Periksa Akun"><br>
+            <input type="password" name="confirmPassword" required><br><br>
+            <input type="submit" name="submit" value="Submit"><br>
         </section>
         <p><a href="login.php">Kembali Ke Menu Login</a></p>
     </div>
@@ -23,7 +62,7 @@
     <!--ALERT-->
     <div id="alertCust" class="success hidden">
     <h1>Data Berhasil Diubah</h1>
-    <button id="closeAlert">OK</button>
+    <button id="closeAlert" type="button">OK</button>
     </div>
 
     <!--ALERT JS-->
@@ -31,7 +70,11 @@
         const custAlert = document.getElementById('alertCust');
         const closeAlert = document.getElementById('closeAlert');
 
-        function regisFail(){
+        <?php if ($succes == true) { ?>
+            regisSucces();
+        <?php } ?>
+
+        function regisSucces(){
             custAlert.classList.remove('hidden');
         }
         //button buat balik di alert

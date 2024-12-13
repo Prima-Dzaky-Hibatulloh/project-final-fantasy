@@ -3,9 +3,9 @@
 
     $err1 = "";
     $err2 = "";
-    $err3 = "";
+    $err3 = false;
     $err4 = "";
-    $succes = 0;
+    $succes = false;
 
     if (isset($_POST['submit'])) {
         $email = $_POST['email'];
@@ -31,10 +31,10 @@
                     if ($pass === $passCek) {
                         $password = password_hash($pass, PASSWORD_DEFAULT);
     
-                        mysqli_query($koneksi, "INSERT INTO account VALUES ('$email', '$user', '$password', NULL, 2)");
-                        $succes = 1;
+                        mysqli_query($koneksi, "INSERT INTO account (email, username, password) VALUES ('$email', '$user', '$password')");
+                        $succes = true;
                     }else{
-                        $err3 .= "<font>password tidak sesuai</font>";
+                        $err3 = true;
                     }
                 }
             }
@@ -54,9 +54,6 @@
         <h2>BUAT AKUN</h2>
         <section class="login-section">
         <form method="POST" action="">
-            <?php if($succes){ ?>
-                <div class="success">akun berhasil ditambahkan!</div>
-            <?php } ?>
             <label>Email</label><br>
             <input type="text" name="email" required><br>
             <?php if ($err1) echo $err1 . "<br>"; ?><br>
@@ -67,8 +64,7 @@
             <input type="password" name="password" required><br>
             <?php if ($err4) echo $err4 . "<br>"; ?><br>
             <label>Konfirmasi Ulang Kata Sandi</label><br>
-            <input type="password" name="cek-password" required><br>
-            <?php if ($err3) echo $err3 . "<br>"; ?><br>
+            <input type="password" name="cek-password" required><br><br>
             <input type="submit" name="submit" value="Daftar"><br>
         </section>
         <p>Sudah Punya Akun? <a href="login.php">Masuk Disini</a></p>
@@ -78,12 +74,12 @@
     <div id="alertSuccess" class="success hidden">
     <h1>BERHASIL!</h1>
     <p>Silahkan tekan tombol dibawah untuk melanjutkan ke halaman login</p>
-    <a href="login.php"><button>Next</button></a>
+    <a href="login.php"><button type="button">Next</button></a>
     </div>
     
     <div id="alertFail" class="fail hidden">
     <h1>INVALID PASSWORD</h1>
-    <button id="closeAlert">Back</button>
+    <button id="closeAlert" type="button">Back</button>
     </div>
 
     <!--ALERT JS-->
@@ -93,14 +89,21 @@
         const closeAlert = document.getElementById('closeAlert');
         
         //Kalau Berhasil
-        function regisSuccess(){
-            successAlert.classList.remove('hidden');
-        }
+        <?php if($succes == true){ ?>
+            function regisSuccess(){
+                successAlert.classList.remove('hidden');
+            }
+            regisSuccess();
+        <?php } ?>
 
         //Kalau Gagal
-        function regisFail(){
-            failAlert.classList.remove('hidden');
-        }
+        <?php if($err3 == true){ ?>
+            function regisFail(){
+                failAlert.classList.remove('hidden');
+            }
+            regisFail();
+        <?php } ?>
+        
         //button buat balik di alertFail
         closeAlert.addEventListener("click", function(){
             failAlert.classList.add('hidden')

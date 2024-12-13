@@ -1,3 +1,33 @@
+<?php
+    require 'koneksi.php';
+    session_start();
+
+    $err = false;
+    $succes = false;
+
+    if (isset($_POST['submit'])) {
+        $user = $_POST['username'];
+        $email = $_POST['email'];
+
+        $sql = mysqli_query($koneksi, "SELECT * FROM account WHERE username = '$user'");
+        if (mysqli_num_rows($sql) > 0) {
+            $data_akun = mysqli_fetch_array($sql);
+            if ($email == $data_akun['email']) {
+                $username = $data_akun['username'];
+                $_SESSION['sesi_username'] = $username;
+                $token = bin2hex(random_bytes(16));
+                mysqli_query($koneksi, "UPDATE account SET token = '$token' WHERE username = '$username'");
+
+                $succes = true;
+            }else{
+                $err = true;
+            }
+        }else{
+            $err = true;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +53,12 @@
     <!--ALERT CUSTOM-->
     <div id="alertSuccess" class="success hidden">
     <h1>AKUN ANDA TERSEDIA</h1>
-    <a href="gantiPassword.php"><button>Ganti</button></a>
+    <a href="gantiPassword.php?token=<?= $token; ?>"><button type="button">Ganti</button></a>
     </div>
     
     <div id="alertFail" class="fail hidden">
     <h1>INVALID PASSWORD</h1>
-    <button id="closeAlert">Back</button>
+    <button id="closeAlert" type="button">Back</button>
     </div>
 
     <!--ALERT JS-->
@@ -37,6 +67,14 @@
         const failAlert = document.getElementById('alertFail');
         const closeAlert = document.getElementById('closeAlert');
         
+        <?php if($succes == true){ ?>
+            regisSuccess();
+        <?php } ?>
+        
+        <?php if($err == true){ ?>
+            regisFail();
+        <?php } ?>
+
         //Kalau Berhasil
         function regisSuccess(){
             successAlert.classList.remove('hidden');
@@ -46,6 +84,7 @@
         function regisFail(){
             failAlert.classList.remove('hidden');
         }
+
         //button buat balik di alertFail
         closeAlert.addEventListener("click", function(){
             failAlert.classList.add('hidden')

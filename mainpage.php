@@ -1,3 +1,13 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['sesi_username'])) {
+        header("Location:login.php");
+    }else{
+        $user = $_SESSION['sesi_username'];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +18,10 @@
     <div class="section sinopsis-container">
         <img src="asset-sinopsis/logo-game.png">
         <div class="profil-box">
-            <p class="profil"><img class="foto-profil" src="asset-sinopsis/logo-sinopsis.png">Halo, <!--php-->!</p>
+            <p class="profil"><img class="foto-profil" src="asset-sinopsis/logo-sinopsis.png">Halo, <?= $user; ?>!</p>
             <div class="dropdown-content">
                 <a href="edit.php">Edit Profil</a>
-                <a href="">Logout</a>
+                <a href="logout.php">Logout</a>
             </div>
         </div>
         <div class="penjelasan">

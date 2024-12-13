@@ -1,3 +1,62 @@
+<?php
+    require 'koneksi.php';
+    session_start();
+
+    $err = false;
+    $succes = false;
+    $username_baru = "";
+    $email_baru = "";
+
+    if (!isset($_SESSION['sesi_username'])) {
+        header("Location:login.php");
+    }else{
+        $id_user = $_SESSION['sesi_id'];
+        //mengambil username
+        $q = mysqli_query($koneksi, "SELECT * FROM account WHERE id = '$id_user'");
+        $info = mysqli_fetch_array($q);
+        $user = $info['username'];
+        
+        if (isset($_POST['submit'])) {
+            $username_baru = $_POST['username'];
+            $email_baru = $_POST['email'];
+
+            //ubah username & email
+            if (!empty($_POST['email']) && !empty($_POST['username'])) {
+                
+                $sql = mysqli_query($koneksi, "SELECT * FROM account WHERE email = '$email_baru'");
+                if (mysqli_num_rows($sql) > 0) {
+                    $err = true;
+                }else{
+                    mysqli_query($koneksi, "UPDATE account SET username = '$username_baru' WHERE id = '$id_user'");
+                    mysqli_query($koneksi, "UPDATE account SET email = '$email_baru' WHERE id = '$id_user'");
+                    $succes = true;
+                }
+                //ubah email
+            }elseif (!empty($email_baru)) {
+                $email_baru = $_POST['email'];
+                
+                $sql = mysqli_query($koneksi, "SELECT email FROM account WHERE email = '$email_baru'");
+                if (mysqli_num_rows($sql) > 0) {
+                    $err = true;
+                }else{
+                    mysqli_query($koneksi, "UPDATE account SET email = '$email_baru' WHERE id = '$id_user'");
+                    $succes = true;
+                }
+                //ubah username
+            }elseif (!empty($username_baru)) {                
+                $sql = mysqli_query($koneksi, "SELECT username FROM account WHERE username = '$username_baru'");
+                if (mysqli_num_rows($sql) > 0) {
+                    $err = true;
+                }else{
+                    mysqli_query($koneksi, "UPDATE account SET username = '$username_baru' WHERE id = '$id_user'");
+                    echo $id_user;
+                    $succes = true;
+                }
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +67,10 @@
     <div class="upper-content">
         <a href="mainpage.php"><img src="asset-sinopsis/logo-game.png" class="logo"></a>
         <div class="profil-box">
-            <p class="profil"><img class="foto-profil" src="asset-sinopsis/logo-sinopsis.png">Halo, <!--php-->!</p>
+            <p class="profil"><img class="foto-profil" src="asset-sinopsis/logo-sinopsis.png">Halo, <?= $user; ?>!</p>
             <div class="dropdown-content">
-                <a href="">Edit Profil</a>
-                <a href="">Logout</a>
+                <a href="edit.php">Edit Profil</a>
+                <a href="logout.php">Logout</a>
             </div>
         </div>
     </div>
@@ -21,13 +80,14 @@
         <section class="login-section">
         <form method="POST" action="">
             <label>Username:</label><br>
-            <input type="text" name="username" required><br><br>
+            <input type="text" name="username"><br><br>
             <label>Email:</label><br>
-            <input type="text" name="email" required><br><br>
+            <input type="text" name="email"><br><br>
             <a href="reset.php">Klik disini untuk mengganti Password anda</a><br><br>
             <input type="submit" name="submit" value="Simpan"><br>
         </section>
     </div>
+
     <!--ALERT-->
     <div id="alertCust" class="success hidden">
     <h1>Data Berhasil Diubah</h1>
@@ -39,9 +99,13 @@
         const custAlert = document.getElementById('alertCust');
         const closeAlert = document.getElementById('closeAlert');
 
-        function regisFail(){
-            custAlert.classList.remove('hidden');
-        }
+        <?php if($succes == true) { ?>
+            function regisSuccess(){
+                custAlert.classList.remove('hidden');
+            }
+            regisSuccess();
+        <?php } ?>
+
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){
             custAlert.classList.add('hidden')

@@ -2,9 +2,8 @@
     session_start();
     require 'koneksi.php';
 
+    $err = false;
     $username = "";
-    $erruser = "";
-    $errpass = "";
     $remember_me = "";
 
     if (isset($_COOKIE['key']) && isset($_COOKIE['id'])) {
@@ -30,15 +29,20 @@
 
         if($query){
             if ($query['username'] == "") {
-                $erruser .= "<font color='red'>akun <b>$username</b> tidak tersedia</font>";
+                $err = true;
             }else if (!password_verify($password, $query['password'])) {
-                $errpass .= "<font color='red'>password yang anda masukkan salah</font>";
+                $err = true;
             }
         }else{
-            $erruser .= "<font color='red'>akun <b>$username</b> tidak tersedia</font>";
+            $err = true;
         }
 
-        if (empty($erruser) && empty($errpass)) {
+        if ($err == false) {
+            //mengambil id untuk session
+            $q = mysqli_query($koneksi, "SELECT id FROM account WHERE username = '$username'");
+            $akun = mysqli_fetch_array($q);
+            $id_user = $akun['id'];
+            $_SESSION['sesi_id'] = $id_user;
             $_SESSION['sesi_username'] = $username;
 
             if ($remember_me == 1) {
@@ -54,9 +58,15 @@
 
                 mysqli_query($koneksi, "UPDATE account SET cookie = '$token' WHERE username = '$username'");
             }
-            header("Location:start.php");
+
+            if ($query['role_id'] == 1) {
+                header("Location:admin/admin.php");
+            }else{
+                header("Location:start.php");
+            }
         }
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -72,11 +82,9 @@
         <section class="login-section">
         <form method="POST" action="login.php">
             <label>Username</label><br>
-            <input type="text" name="username" value="<?php if(isset($cookieUsr)) echo $cookieUsr ?>" required><br>
-            <?php if($erruser) echo $erruser; ?><br>
+            <input type="text" name="username" required><br>
             <label>Password</label><br>
-            <input type="password" name="password" value="<?php if(isset($cookiePass)) echo $cookiePass ?>" required><br>
-            <?php if($errpass) echo $errpass; ?><br>
+            <input type="password" name="password" required><br>
             <input type="checkbox" name="remember_me" value="1" 
                 <?php if($remember_me) echo "checked" ?>>
             <label for="remember_me">Remember me</label>
@@ -89,8 +97,8 @@
 
     <!--ALERT-->
     <div id="alertFail" class="fail hidden">
-    <h1>INVALID PASSWORD</h1>
-    <button id="closeAlert">Back</button>
+    <h1>INVALID USERNAME OR PASSWORD </h1>
+    <button id="closeAlert" type="button">Back</button>
     </div>
 
     <!--ALERT JS-->
@@ -98,9 +106,13 @@
         const failAlert = document.getElementById('alertFail');
         const closeAlert = document.getElementById('closeAlert');
 
-        function regisFail(){
-            failAlert.classList.remove('hidden');
-        }
+        <?php if($err == true){ ?>
+            function regisFail(){
+                failAlert.classList.remove('hidden');
+            }
+            regisFail();
+        <?php } ?>
+
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){
             failAlert.classList.add('hidden')

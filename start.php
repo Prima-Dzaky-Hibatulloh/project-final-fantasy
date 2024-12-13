@@ -16,7 +16,14 @@
     <div class="container">
     <img src="asset-halman-utama/logo-game.png">
     <h2>Selamat Datang, <?= $_SESSION['sesi_username']; ?>!</h2>
-    <a href="mainpage.php">MULAI PETUALANGANMU<a>
+    <a href="mainpage.php">MULAI PETUALANGANMU</a>
+    <p>klik di manapun untuk melanjutkan</p>
     </div>
+
+    <script>
+        document.addEventListener("click", function () {
+            window.location.href = "mainpage.php";
+        });
+    </script>
 </body>
 </html>

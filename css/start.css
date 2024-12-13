@@ -37,3 +37,8 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin-top: 60px;
+    color: #FFC107;
+    font-size: 15px;
+}
