@@ -25,7 +25,9 @@
                     <div class="tambah">+</div>
                     <div id="box2" class="materia-choice"><img id="img2" src="" style="display: none;"></div>
                 </div>
-                <div id="result" class="result-box"></div>
+                <div id="result" class="result-box">
+                    <p>Hasil Combine</p>
+                </div>
                 <button id="combine" class="combine-btn">COMBINE</button>
         </div>
         <div class="materia-block">
@@ -48,20 +50,57 @@
             img.src = image;
             img.style.display = 'block';
         }
-
+        
+        //Memunculkan gambar ketika dipilih
         document.querySelectorAll('.materia-list img').forEach(img => {
             img.addEventListener('click', function () {
                 const selectedImage = this.dataset.image;
                 const boxId = this.parentElement.dataset.box;
                 updateColorBox(boxId, selectedImage);
             });
-
-            document.getElementById('combine').addEventListener('click', () => {
+        
+        //Hasil Combine
+        document.getElementById('combine').addEventListener('click', () => {
             const materia1 = document.getElementById('box1').querySelector('img').src;
             const materia2 = document.getElementById('box2').querySelector('img').src;
             const resultBox = document.getElementById('result');
 
             let combineResult = '';
+
+            if (materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/green.png')){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/red.png')) || (materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/green.png'))){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/yellow.png')) || (materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/green.png'))){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/blue.png')) || (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/green.png'))){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/green.png'))){
+                combineResult = '';
+            } else if (materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/red.png')){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/yellow.png')) || (materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/red.png'))){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/blue.png')) || (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/red.png'))){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/red.png'))){
+                combineResult = '';
+            } else if (materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/yellow.png')){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/blue.png')) || (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/yellow.png'))){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/yellow.png'))){
+                combineResult = '';
+            } else if (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/blue.png')){
+                combineResult = '';
+            } else if ((materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/blue.png'))){
+                combineResult = '';
+            } else if (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/purple.png')){
+                combineResult = '';
+            }
+
+            resultBox.style.li = combineResult ? `url(${combineResult})` : 'none';
+            resultBox.textContent = combineResult ? '' : 'Tidak ada hasil';
             });
         });
     </script>

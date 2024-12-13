@@ -25,17 +25,43 @@
                 <th>Action</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><!--PHP--></td>
+                <td><!--PHP--></td>
+                <td><!--PHP--></td>
+                <td><!--PHP--></td>
+                <td><!--PHP--></td>
                 <td>
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button id="editBtn" class="edit" onclick="editUser()">Edit</button>
+                    <button id="deleteBtn" class="delete">Delete</button>
                 </td>
             </tr>
         </table>
     </div>
+
+    <div id="editBox" class="container hidden">
+        <h2>Edit Profil</h2>
+        <section class="login-section">
+        <form method="POST" action="">
+            <label>Username:</label><br>
+            <input type="text" name="username"><br><br>
+            <label>Email:</label><br>
+            <input type="text" name="email"><br><br>
+            <a href="reset.php">Klik disini untuk mengganti Password anda</a><br><br>
+            <input type="submit" name="submit" value="Simpan"><br>
+        </section>
+    </div>
+
+    <script>
+        const editBtn = document.getElementById('editBtn');
+        const editBox = document.getElementById('editBox');
+
+        function editUser(){
+            editBox.classList.remove('hidden');
+        }
+        
+        closeBtn.addEventListener("click", function(){
+            editBox.classList.add('hidden')
+        })
+    </script>
 </body>
 </html>

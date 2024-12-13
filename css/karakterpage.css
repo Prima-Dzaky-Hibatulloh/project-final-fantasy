@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../font/CinzelRegular-3jEM.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Caudex';
+    src: url('../font/Caudex-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../font/Poppins-Regular.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    place-items: center;
+}
+
+h1 {
+    font-family: 'Cinzel';
+    text-shadow: 0 2px 4px #404243;
+    padding: 20px;
+}
+
+p {
+    color: #fff;
+    font-family: 'Cinzel';
+}
+
+img {
+    width: 360px;
+}
+
+.container {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    margin: 0 150px;
+}
+
+.char-box {
+    padding: 20px;
+    border-radius: 70px;
+}
+
+.char-desc p {
+    color: #000000;
+    font-family: 'Caudex';
+    text-align: justify;
+}
+
+.char-profil {
+    font-family: 'Poppins';
+    padding: 18px 25px;
+    background-color: #022833;
+    border-radius: 30px;
+}
+
+.char-profil h3 {
+    color: #FFC107;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.char-profil p {
+    color: #fff;
+    font-size: 10px;
+    padding-right: 45px;
+}
+
+.char-line {
+    box-shadow: 0 4px 4px #3A6B74;
+    border-radius: 30px;
+    padding: 12px 20px;
+    margin: 25px 0;
+}
+
+button {
+    position: absolute;
+    left: 0;
+    color: #fff;
+    background-color: #042D6F;
+    border-style: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin: 12px;
+}
+
+/*CLOUD*/
+.cloud {
+    background: linear-gradient(#fff, #515066);
+    background-attachment: fixed;
+}
+
+.cloud h1 {
+    color: #4E4E60;
+}
+
+.cloud .char-box {
+    background-color: #515064;
+}
+
+.cloud .char-line {
+    background: linear-gradient(to right, #424153, #07102E);
+}
+
+/*BARRET*/
+.barret {
+    background: linear-gradient(#fff, #CBA188);
+    background-attachment: fixed;
+}
+
+.barret h1 {
+    color: #E1906A;
+}
+
+.barret .char-box {
+    background-color: #C58763;
+}
+
+.barret .char-line {
+    background: linear-gradient(to right, #CE4E2B, #07102E);
+}
+
+/*TIFA*/
+.tifa {
+    background: linear-gradient(#fff, #915D5B);
+    background-attachment: fixed;
+}
+
+.tifa img {
+    width: 120px;
+    padding: 12px 70px;
+}
+
+.tifa h1 {
+    color: #804136;
+}
+
+.tifa .char-box {
+    background-color: #68211C;
+}
+
+.tifa .char-line {
+    background: linear-gradient(to right, #780C13, #07102E);
+}
+
+/*AERITH*/
+.aerith {
+    background: linear-gradient(#fff, #C8B6BA);
+    background-attachment: fixed;
+}
+
+.aerith img {
+    width: 270px;
+    padding: 10px 30px;
+}
+
+.aerith h1 {
+    color: #AA6E76;
+}
+
+.aerith .char-box {
+    background-color: #C1A4A7;
+}
+
+.aerith .char-line {
+    background: linear-gradient(to right, #AA6E76, #07102E);
+}
+
+/*RED XII*/
+.red {
+    background: linear-gradient(#fff, #B4786A);
+    background-attachment: fixed;
+}
+
+.red img {
+    padding: 47px 20px;
+}
+
+.red h1 {
+    color: #CE4E2B;
+}
+
+.red .char-box {
+    background-color: #A24A34;
+}
+
+.red .char-line {
+    background: linear-gradient(to right, #653226, #07102E);
+}
+
+/*YUFFIE*/
+.yuffie {
+    background: linear-gradient(#fff, #557C43);
+    background-attachment: fixed;
+}
+
+.yuffie img {
+    width: 200px;
+    padding: 0 40px;
+}
+
+.yuffie h1 {
+    color: #285A0E;
+}
+
+.yuffie .char-box {
+    background-color: #285812;
+}
+
+.yuffie .char-line {
+    background: linear-gradient(to right, #2C5D1B, #07102E);
+}
+
+/*CID*/
+.cid {
+    background: linear-gradient(#fff, #595D77);
+    background-attachment: fixed;
+}
+
+.cid img {
+    width: 300px;
+    padding: 10px 30px;
+}
+
+.cid h1 {
+    color: #01000B;
+}
+
+.cid .char-box {
+    background-color: #081034;
+}
+
+.cid .char-line {
+    background: linear-gradient(to right, #0F0B16, #07102E);
+}
+
+/*VINCENT*/
+.vincent {
+    background: linear-gradient(#fff, #BD8888);
+    background-attachment: fixed;
+}
+
+.vincent img {
+    width: 237px;
+    padding: 0 50px;
+}
+
+.vincent h1 {
+    color: #972A2E;
+}
+
+.vincent .char-box {
+    background-color: #8A2D2D;
+}
+
+.vincent .char-line {
+    background: linear-gradient(to right, #AD3A40, #07102E);
+}
+
+/*SEPHIROTH*/
+.sephiroth {
+    background: linear-gradient(#fff, #A59895);
+    background-attachment: fixed;
+}
+
+.sephiroth img {
+    width: 240px;
+    padding: 0 57px;
+}
+
+.sephiroth h1 {
+    color: #393432;
+}
+
+.sephiroth .char-box {
+    background-color: #3B322E;
+}
+
+.sephiroth .char-line {
+    background: linear-gradient(to right, #786B64, #07102E);
+}
+
+/*CAIT*/
+.cait {
+    background: linear-gradient(#fff, #CFBE98);
+    background-attachment: fixed;
+}
+
+.cait h1 {
+    color: #AE903A;
+}
+
+.cait .char-box {
+    background-color: #AD8E4A;
+}
+
+.cait .char-line {
+    background: linear-gradient(to right, #665745, #07102E);
+}

@@ -16,7 +16,7 @@
     <div class="container">
     <img src="asset-halman-utama/logo-game.png">
     <h2>Selamat Datang, <?= $_SESSION['sesi_username']; ?>!</h2>
-    <a href="">MULAI PETUALANGANMU<a>
+    <a href="mainpage.php">MULAI PETUALANGANMU<a>
     </div>
 </body>
 </html>
