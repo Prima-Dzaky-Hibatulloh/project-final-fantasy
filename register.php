@@ -1,10 +1,10 @@
 <?php
     require 'koneksi.php';
 
-    $err1 = "";
-    $err2 = "";
+    $err1 = false;
+    $err2 = false;
     $err3 = false;
-    $err4 = "";
+    $err4 = false;
     $succes = false;
 
     if (isset($_POST['submit'])) {
@@ -16,16 +16,16 @@
         //cek email
         $return = mysqli_query($koneksi, "SELECT email FROM account WHERE email = '$email'");
         if (mysqli_fetch_assoc($return)) {
-            $err1 .= "<font>email sudah terdaftar!</font>";
+            $err1 = true;
         }else{
             //cek username
             $hasil = mysqli_query($koneksi, "SELECT username FROM account WHERE username = '$user'");
             if (mysqli_fetch_assoc($hasil)) {
-                $err2 .= "<font>username <b>" . $user . "</b> tidak tersedia!</font>";
+                $err2 = true;
             }else{
                 //minimal 8 karakter
                 if (strlen($pass) < 8) {
-                    $err4 .= "<font>password minimal memiliki 8 karakter</font>";
+                    $err4 = true;
                 }else {
                     //konfir password
                     if ($pass === $passCek) {
@@ -55,14 +55,11 @@
         <section class="login-section">
         <form method="POST" action="">
             <label>Email</label><br>
-            <input type="text" name="email" required><br>
-            <?php if ($err1) echo $err1 . "<br>"; ?><br>
+            <input type="text" name="email" required><br><br>
             <label>Username</label><br>
-            <input type="text" name="username" required><br>
-            <?php if ($err2) echo $err2 . "<br>"; ?><br>
+            <input type="text" name="username" required><br><br>
             <label>Kata Sandi<span>*minimal 8 karakter, gunakan angka dan simbol untuk keamanan extra</span></label><br>
-            <input type="password" name="password" required><br>
-            <?php if ($err4) echo $err4 . "<br>"; ?><br>
+            <input type="password" name="password" required><br><br>
             <label>Konfirmasi Ulang Kata Sandi</label><br>
             <input type="password" name="cek-password" required><br><br>
             <input type="submit" name="submit" value="Daftar"><br>
@@ -97,10 +94,28 @@
             }
             regisSuccess();
         <?php } ?>
+        
+        //Kalau Gagal (Konfirmasi password tidak sesuai)
+        <?php if($err1 == true){ ?>
+            function regisFail(){
+                alertMessage.textContent = "Email sudah terdaftar";
+                failAlert.classList.remove('hidden');
+            }
+            regisFail();
+        <?php } ?>
 
         //Kalau Gagal (Password tidak sesuai regex)
-        <?php if($err3 == true){ ?>
+        <?php if($err4 == true){ ?>
             function regisFail(){
+                failAlert.classList.remove('hidden');
+            }
+            regisFail();
+        <?php } ?>
+
+        //Kalau Gagal (Konfirmasi password tidak sesuai)
+        <?php if($err2 == true){ ?>
+            function regisFail(){
+                alertMessage.textContent = "Username tidak tersedia";
                 failAlert.classList.remove('hidden');
             }
             regisFail();

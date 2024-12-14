@@ -3,6 +3,7 @@
     session_start();
 
     $err = false;
+    $err2 = false;
     $succes = false;
     if (!isset($_SESSION['sesi_username'])) {
         header("Location:login.php");
@@ -17,15 +18,21 @@
                 if (isset($_POST['submit'])) {
                     $pass = $_POST['password'];
                     $pass2 = $_POST['confirmPassword'];
-            
-                    if ($pass === $pass2) {
-                        $password = password_hash($pass, PASSWORD_DEFAULT);
-                        $sqlquery = mysqli_query($koneksi, "UPDATE account SET password = '$password' WHERE username = '$user'");
-                        
-                        $succes = true;
+
+                    if (strlen($pass) < 8) {
+                        $err2 = true;
                     }else{
-                        $err = true;
+                        if ($pass === $pass2) {
+                            $password = password_hash($pass, PASSWORD_DEFAULT);
+                            $sqlquery = mysqli_query($koneksi, "UPDATE account SET password = '$password' WHERE username = '$user'");
+                            mysqli_query($koneksi, "UPDATE account SET token = NULL WHERE username = '$user'");
+                            
+                            $succes = true;
+                        }else{
+                            $err = true;
+                        }
                     }
+            
                 }
             }else {
                 header("Location:reset.php");
@@ -40,7 +47,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reset.css?v=1.0">
     <title>Login</title>
 </head>
 <body>
@@ -64,34 +71,52 @@
     <h1>Data Berhasil Diubah</h1>
     <button id="closeAlert" type="button">OK</button>
     </div>
-    
+
     <div id="alertFail" class="fail hidden">
     <h1>INVALID</h1>
     <p id="alertMessage" style="color: #fff; font-size: 20px;">Password Tidak Sesuai</p>
-    <button id="closeAlert" type="button">Back</button>
+    <button id="close" type="button">Back</button>
     </div>
 
     <!--ALERT JS-->
     <script>
         const custAlert = document.getElementById('alertCust');
         const closeAlert = document.getElementById('closeAlert');
+        const close = document.getElementById('close');
+        const failAlert = document.getElementById('alertFail');
 
         <?php if ($succes == true) { ?>
             regisSucces();
+        <?php } ?>
+        
+        <?php if ($err2 == true) { ?>
+            function regisFail(){
+            alertMessage.textContent = "Password tidak memenuhi syarat!";
+            failAlert.classList.remove('hidden');
+            }
+            regisFail();
+        <?php } ?>
+
+        <?php if ($err == true) { ?>
+            function regisFail(){
+                alertMessage.textContent = "Konfirmasi Password Salah";
+                failAlert.classList.remove('hidden');
+            }
+            regisFail();
         <?php } ?>
 
         function regisSucces(){
             custAlert.classList.remove('hidden');
         }
 
-        function regisFail(){
-            alertMessage.textContent = "Konfirmasi Password Salah";
-            failAlert.classList.remove('hidden');
-        }
 
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){
-            custAlert.classList.add('hidden')
+            custAlert.classList.add('hidden');
+        })
+
+        close.addEventListener("click", function(){
+            failAlert.classList.add('hidden');
         })
     </script>
 </body>

@@ -58,7 +58,7 @@
     
     <div id="alertFail" class="fail hidden">
     <h1>INVALID</h1>
-    <p style="color: #fff; font-size: 20px;">Username atau Password salah</p>
+    <p style="color: #fff; font-size: 20px;">Email atau Username tidak tersedia</p>
     <button id="closeAlert" type="button">Back</button>
     </div>
 
