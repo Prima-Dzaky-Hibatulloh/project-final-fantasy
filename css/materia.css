@@ -35,27 +35,32 @@ h2{
 
 .container{
     display: flex;
+    align-items: center;
     gap: 100px;
-    margin: 0 230px;
+    margin: 60px 200px;
 }
 
 .materia-block{
     place-items: center;
+    margin-bottom: 20px;
 }
 
-.materia-block h2{
+.materia-block h3{
+    color: #fff;
     font-family: 'Poppins';
+    margin-top: 20px;
 }
 
 .materia-block img{
     padding: 15px;
-    width: 50px;
+    width: 90px;
 }
 
 .materia-card{
     background-color: rgba(54, 54, 54, 0.4);
     border: none;
     border-radius: 5px;
+    margin-right: 20px;
 }
 
 .hijau{
@@ -89,16 +94,14 @@ h2{
 
 .materia-box{
     display: flex;
-    gap: 20px;
+    place-items: center;
 }
 
 .materia-choice{
     background-color: rgba(54, 54, 54, 0.4);
     border: none;
     border-radius: 5px;
-    padding: 10px;
-    width: 60px;
-    height: 60px;
+    margin-right: 20px;
     box-shadow: 0 4px 4px #fff;
 }
 
@@ -114,6 +117,7 @@ h2{
     font-size: 18px;
     font-weight: bold;
     margin-top: 30px;
+    margin-right: 20px;
     width: 20px;
     height: 20px;
 }
@@ -121,7 +125,7 @@ h2{
 .result-box{
     color: #fff;
     background-color: #07102E;
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 4px 4px #fff;

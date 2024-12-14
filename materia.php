@@ -9,39 +9,26 @@
     <h2>Kreasikan Materia Untuk Bertarung</h2>
     <div class="container">
         <div class="materia-block">
-            <h2>Pilih Materia</h2>
-            <div class="materia-list" data-box="box1">
-                <img class="materia-card hijau" src="asset-materia/green.png" data-image="asset-materia/green.png"><br><br>
-                <img class="materia-card merah" src="asset-materia/red.png" data-image="asset-materia/red.png"><br><br>
-                <img class="materia-card kuning" src="asset-materia/yellow.png" data-image="asset-materia/yellow.png"><br><br>
-                <img class="materia-card biru" src="asset-materia/blue.png" data-image="asset-materia/blue.png"><br><br>
-                <img class="materia-card ungu" src="asset-materia/purple.png" data-image="asset-materia/purple.png">
+            <div class="materia-box">
+                <div class="materia-card biru"><img src="asset-materia/blue.png"></div>
+                <div class="tambah">+</div>
+                <div id="box" class="materia-choice"><img id="img2" src="" style="display: none;"></div>
+            </div>
+            <h3>Pilih Materia Untuk Dikombinasikan dengan Materia Support</h3>
+            <div class="materia-list" data-box="box">
+                <img class="materia-card hijau" src="asset-materia/green.png" data-image="asset-materia/green.png">
+                <img class="materia-card merah" src="asset-materia/red.png" data-image="asset-materia/red.png">
+                <img class="materia-card kuning" src="asset-materia/yellow.png" data-image="asset-materia/yellow.png">
             </div>
         </div>
         <div class="result-block">
-                <h2>Hasil Kombinasi</h2>
-                <div class="materia-box">
-                    <div id="box1" class="materia-choice"><img id="img1" src="" style="display: none;"></div>
-                    <div class="tambah">+</div>
-                    <div id="box2" class="materia-choice"><img id="img2" src="" style="display: none;"></div>
-                </div>
-                <div id="result" class="result-box">
-                    <p>Hasil Combine</p>
-                </div>
-                <button id="combine" class="combine-btn">COMBINE</button>
-        </div>
-        <div class="materia-block">
-            <h2>Pilih Materia</h2>
-            <div class="materia-list" data-box="box2">
-                <img class="materia-card hijau" src="asset-materia/green.png" data-image="asset-materia/green.png"><br><br>
-                <img class="materia-card merah" src="asset-materia/red.png" data-image="asset-materia/red.png"><br><br>
-                <img class="materia-card kuning" src="asset-materia/yellow.png" data-image="asset-materia/yellow.png"><br><br>
-                <img class="materia-card biru" src="asset-materia/blue.png" data-image="asset-materia/blue.png"><br><br>
-                <img class="materia-card ungu" src="asset-materia/purple.png" data-image="asset-materia/purple.png">
+            <h2>Hasil Kombinasi</h2>
+            <div id="result" class="result-box">
+            <p>Hasil Combine</p>
             </div>
+        <button id="combine" class="combine-btn">COMBINE</button>
         </div>
     </div>
-
     <script>
         function updateColorBox(boxId, image) {
             const box = document.getElementById(boxId);
@@ -61,41 +48,16 @@
         
         //Hasil Combine
         document.getElementById('combine').addEventListener('click', () => {
-            const materia1 = document.getElementById('box1').querySelector('img').src;
-            const materia2 = document.getElementById('box2').querySelector('img').src;
+            const materia = document.getElementById('box').querySelector('img').src;
             const resultBox = document.getElementById('result');
 
             let combineResult = '';
 
-            if (materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/green.png')){
+            if (materia.includes('asset-materia/green.png')){
                 combineResult = '';
-            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/red.png')) || (materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/green.png'))){
+            } else if (materia.includes('asset-materia/yellow.png')){
                 combineResult = '';
-            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/yellow.png')) || (materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/green.png'))){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/blue.png')) || (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/green.png'))){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/green.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/green.png'))){
-                combineResult = '';
-            } else if (materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/red.png')){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/yellow.png')) || (materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/red.png'))){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/blue.png')) || (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/red.png'))){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/red.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/red.png'))){
-                combineResult = '';
-            } else if (materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/yellow.png')){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/blue.png')) || (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/yellow.png'))){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/yellow.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/yellow.png'))){
-                combineResult = '';
-            } else if (materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/blue.png')){
-                combineResult = '';
-            } else if ((materia1.includes('asset-materia/blue.png') && materia2.includes('asset-materia/purple.png')) || (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/blue.png'))){
-                combineResult = '';
-            } else if (materia1.includes('asset-materia/purple.png') && materia2.includes('asset-materia/purple.png')){
+            } else if (materia.includes('asset-materia/red.png')){
                 combineResult = '';
             }
 
