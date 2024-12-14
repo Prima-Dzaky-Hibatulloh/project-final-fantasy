@@ -1,3 +1,22 @@
+<?php
+    require 'koneksi.php';
+
+    //mengambil data materia
+    $sql = mysqli_query($koneksi, "SELECT * FROM materia");
+    $data = mysqli_fetch_all($sql, MYSQLI_ASSOC);
+
+    $support = $data[0]['picture'];
+    $command = $data[1]['picture'];
+    $summon = $data[2]['picture'];
+    $complete = $data[3]['picture'];
+    $magic = $data[4]['picture'];
+
+    //mengambil data combine
+    $q = mysqli_query($koneksi, "SELECT * FROM combine");
+    $info = mysqli_fetch_all($q, MYSQLI_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,16 +72,19 @@
 
             let combineResult = '';
 
-            if (materia.includes('asset-materia/green.png')){
-                combineResult = '';
-            } else if (materia.includes('asset-materia/yellow.png')){
-                combineResult = '';
-            } else if (materia.includes('asset-materia/red.png')){
-                combineResult = '';
+            if (materia.includes('<?= $magic; ?>')){
+                combineResult = 'hijau';
+                resultBox.textContent = "<?= $info[1]['effect']; ?>";
+            } else if (materia.includes('<?= $command; ?>')){
+                combineResult = 'kuning';
+                resultBox.textContent = "<?= $info[2]['effect']; ?>";
+            } else if (materia.includes('<?= $summon; ?>')){
+                combineResult = 'merah';
+                resultBox.textContent = "<?= $info[0]['effect']; ?>";
             }
 
             resultBox.style.li = combineResult ? `url(${combineResult})` : 'none';
-            resultBox.textContent = combineResult ? '' : 'Tidak ada hasil';
+            // resultBox.textContent = combineResult ? '' : 'Tidak ada hasil';
             });
         });
     </script>
