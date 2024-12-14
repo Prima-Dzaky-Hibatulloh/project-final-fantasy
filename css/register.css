@@ -53,7 +53,7 @@ body {
 .container span {
     margin: 0;
     font-size: 8px;
-    margin-left: 67px;
+    margin-left: 105px;
     color: #FFC107;
     font-weight: lighter;
     font-style: italic;
@@ -76,6 +76,7 @@ body {
 .container input[type="text"], input[type="password"] {
     width: 407px;
     height: 30px;
+    color: #fff;
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
@@ -93,6 +94,10 @@ body {
     width: 228px;
     padding: 7px;
     cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #06404b;
 }
 
 .login-section {

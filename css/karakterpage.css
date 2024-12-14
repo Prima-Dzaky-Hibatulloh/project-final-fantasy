@@ -82,7 +82,6 @@ button {
     position: absolute;
     left: 0;
     color: #fff;
-    background-color: #042D6F;
     border-style: none;
     border-radius: 5px;
     padding: 7px 12px;
@@ -107,6 +106,10 @@ button {
     background: linear-gradient(to right, #424153, #07102E);
 }
 
+.cloud button{
+    background-color: #515064;
+}
+
 /*BARRET*/
 .barret {
     background: linear-gradient(#fff, #CBA188);
@@ -123,6 +126,10 @@ button {
 
 .barret .char-line {
     background: linear-gradient(to right, #CE4E2B, #07102E);
+}
+
+.barret button{
+    background-color: #C58763;
 }
 
 /*TIFA*/
@@ -148,6 +155,10 @@ button {
     background: linear-gradient(to right, #780C13, #07102E);
 }
 
+.tifa button{
+    background-color: #68211C;
+}
+
 /*AERITH*/
 .aerith {
     background: linear-gradient(#fff, #C8B6BA);
@@ -171,6 +182,10 @@ button {
     background: linear-gradient(to right, #AA6E76, #07102E);
 }
 
+.aerith button{
+    background-color: #C1A4A7;
+}
+
 /*RED XII*/
 .red {
     background: linear-gradient(#fff, #B4786A);
@@ -191,6 +206,10 @@ button {
 
 .red .char-line {
     background: linear-gradient(to right, #653226, #07102E);
+}
+
+.red button{
+    background-color: #A24A34;
 }
 
 /*YUFFIE*/
@@ -216,6 +235,10 @@ button {
     background: linear-gradient(to right, #2C5D1B, #07102E);
 }
 
+.yuffie button{
+    background-color: #285812;
+}
+
 /*CID*/
 .cid {
     background: linear-gradient(#fff, #595D77);
@@ -237,6 +260,10 @@ button {
 
 .cid .char-line {
     background: linear-gradient(to right, #0F0B16, #07102E);
+}
+
+.cid button{
+    background-color: #081034;
 }
 
 /*VINCENT*/
@@ -262,6 +289,10 @@ button {
     background: linear-gradient(to right, #AD3A40, #07102E);
 }
 
+.vincent button{
+    background-color: #8A2D2D;
+}
+
 /*SEPHIROTH*/
 .sephiroth {
     background: linear-gradient(#fff, #A59895);
@@ -285,6 +316,10 @@ button {
     background: linear-gradient(to right, #786B64, #07102E);
 }
 
+.sephiroth button{
+    background-color: #3B322E;
+}
+
 /*CAIT*/
 .cait {
     background: linear-gradient(#fff, #CFBE98);
@@ -301,4 +336,8 @@ button {
 
 .cait .char-line {
     background: linear-gradient(to right, #665745, #07102E);
+}
+
+.cait button{
+    background-color: #AD8E4A;
 }

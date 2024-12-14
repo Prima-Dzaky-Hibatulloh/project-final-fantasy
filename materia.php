@@ -24,6 +24,7 @@
     <title>Simulasi Kombinasi Materia</title>
 </head>
 <body>
+    <a href="mainpage.php#materia"><button class="back">Back</button></a>
     <h1>Temukan Efek Terbaikmu!</h1>
     <h2>Kreasikan Materia Untuk Bertarung</h2>
     <div class="container">

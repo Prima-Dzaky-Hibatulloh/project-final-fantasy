@@ -29,7 +29,7 @@
             <p>FINAL FANTASY VII REBIRTH adalah kisah baru yang sangat dinantikan dalam proyek remake FINAL FANTASY VII, sebuah penggambaran ulang dari game ikonik aslinya menjadi tiga judul mandiri oleh para penciptanya. Dalam game ini, pemain akan menikmati berbagai elemen baru seiring dengan perkembangan cerita, yang berpuncak pada perjalanan kelompok menuju "The Forgotten Capital" dari game asli FINAL FANTASY VII.</p>
         </div>
     </div>
-    <div class="section karakter-container">
+    <div id="karakter" class="section karakter-container">
         <div class="karakter-desc">
             <h1>KARAKTER</h1>
             <p>Dalam petualangan mandiri ini untuk para penggemar dan pendatang baru, Cloud dan kawan-kawannya menjelajahi seluruh planet, dengan takdir yang belum tertulis, membuat setiap langkah di luar kota distopia Midgar terasa segar dan penuh misteri.</p>
@@ -37,16 +37,16 @@
         </div>
         <img src="asset-karakter/hero.png">
     </div>
-    <div class="section map-container">
+    <div id="map" class="section map-container">
         <h1>DUNIA</h1>
         <div class="map-display">
-            <img src="asset-map/2-map/1.png">
-            <img src="asset-map/2-map/2.png">
+            <img class="map1" src="asset-map/2-map/1.png">
+            <img class="map2" src="asset-map/2-map/2.png">
         </div>
         <p>Dunia ini terdiri dari berbagai wilayah yang beragam, masing-masing memiliki lingkungan unik dengan keindahan dan karakteristik tersendiri yang dapat dijelajahi serta dinikmati oleh para pemain selama menjalani petualangan mereka.</p>
         <a href="map.php"><button>EXPLORE DUNIA FANTASY</button></a>
     </div>
-    <div class="section kisah-container">
+    <div id="kisah" class="section kisah-container">
         <h1>KISAH PERJALANAN</h1>
         <h2>Bayangan Masa Lalu di Nibelheim</h2>
         <div class="kisah-display">
@@ -54,7 +54,7 @@
         </div>
         <a href="kisah.php"><button>EXPLORE</button></a>
     </div>
-    <div class="section materia-container">
+    <div id="materia" class="section materia-container">
         <h1>MATERIA</h1>
         <div class="materia-display">
             <div class="materia-card materia-ungu">
@@ -90,5 +90,23 @@
             <img src="asset-halman-utama/logo-game.png"> <div class="copyright">&copy; 2024. Dikelola Kelompok 8</div>
         </div>
     </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        let currentSection = 0;
+
+        function scrollToSection(index) {
+            currentSection = Math.max(0, Math.min(index, sections.length - 1));
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.addEventListener('wheel', (e) => {
+            if (e.deltaY > 0) {
+                scrollToSection(currentSection + 1);
+            } else {
+                scrollToSection(currentSection - 1);
+            }
+        });
+    </script>
 </body>
 </html>

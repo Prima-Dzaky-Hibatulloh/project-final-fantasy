@@ -26,7 +26,9 @@ h1{
 
 .card-container{
     display: flex;
+    align-items: start;
     gap: 50px;
+    height: 500px;
 }
 
 .storycard{
@@ -34,9 +36,47 @@ h1{
     text-align: center;
 }
 
+.a1{
+    opacity: 0;
+    animation: alur1 2s 0.5s forwards;
+}
+
+@keyframes alur1 {
+    from {opacity: 0;} to {opacity: 100;}
+}
+
+.a2{
+    opacity: 0;
+    align-self: flex-end;
+    animation: alur2 2s 3s forwards;
+}
+
+@keyframes alur2 {
+    from {opacity: 0;} to {opacity: 100;}
+}
+
+.a3{
+    opacity: 0;
+    animation: alur3 2s 6s forwards;
+}
+
+@keyframes alur3 {
+    from {opacity: 0;} to {opacity: 100;}
+}
+
+.a4{
+    opacity: 0;
+    align-self: center;
+    animation: alur4 2s 9s forwards;
+}
+
+@keyframes alur4 {
+    from {opacity: 0;} to {opacity: 100;}
+}
+
 img{
     width: 250px;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 5px;
 }
 
@@ -61,13 +101,13 @@ h2, p{
     font-family: 'Alegreya';
 }
 
-button{
+button {
+    position: absolute;
+    left: 0;
     color: #fff;
-    font-family: 'Alegreya';
-    font-weight: bold;
     background-color: #042D6F;
     border-style: none;
-    width: 150px;
-    padding: 10px;
-    margin-top: 20px;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin: 12px 16px;
 }

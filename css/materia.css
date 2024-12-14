@@ -12,7 +12,7 @@
 }
 
 body{
-    margin: 0;
+    margin: 30px 0;
     background-image: linear-gradient(#000000, #0f2261, #000000);
     background-attachment: fixed;
     background-size: cover;
@@ -125,6 +125,7 @@ h2{
 .result-box{
     color: #fff;
     background-color: #07102E;
+    max-width: 160px;
     margin-top: 10px;
     padding: 40px;
     border-radius: 10px;
@@ -142,4 +143,15 @@ h2{
     width: 150px;
     padding: 10px;
     margin-top: 40px;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    color: #fff;
+    background-color: #042D6F;
+    border-style: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    margin: 12px;
 }

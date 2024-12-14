@@ -138,10 +138,18 @@
     font-family: 'Poppins';
     font-weight: bold;
     background-color: #042D6F;
-    border-style: none;
+    border-style: solid;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: #429BB6;
     width: 150px;
     padding: 10px;
     margin-top: 20px;
+}
+
+.karakter-container button:hover{
+    background-color: #01183d;
+    cursor: pointer;
 }
 
 .karakter-container img{
@@ -179,10 +187,18 @@
     font-weight: bold;
     font-size: 16px;
     background-color: #042D6F;
-    border-style: none;
+    border-style: solid;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: #429BB6;
     width: 270px;
     padding: 12px;
     margin-top: 20px;
+}
+
+.map-container button:hover{
+    background-color: #01183d;
+    cursor: pointer;
 }
 
 .map-container img{
@@ -241,10 +257,18 @@
     font-family: 'Poppins';
     font-weight: bold;
     background-color: #042D6F;
-    border-style: none;
+    border-style: solid;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: #429BB6;
     width: 150px;
     padding: 12px;
     margin-top: 20px;
+}
+
+.kisah-container button:hover{
+    background-color: #01183d;
+    cursor: pointer;
 }
 
 /*MATERIA SECTION*/
@@ -266,7 +290,12 @@
 }
 
 .materia-container .materia-display{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
+    height: 370px;
+    align-items: start;
 }
 
 .materia-container .materia-card{
@@ -285,6 +314,7 @@
 
 .materia-container .materia-kuning{
     background-color: #A27A00;
+    align-self: flex-end;
 }
 
 .materia-container .materia-hijau{
@@ -293,6 +323,7 @@
 
 .materia-container .materia-biru{
     background-color: #0323b0;
+    align-self: flex-end;
 }
 
 .materia-container .materia-merah{
@@ -302,7 +333,13 @@
 .materia-container img{
     width: 80px;
     padding: 7px;
-    filter: drop-shadow(0 4px 4px rgba(0 0 0 ));
+    filter: drop-shadow(0 0 4px rgba(0 0 0));
+    transition: width 1s, transform 2s;
+}
+
+.materia-container img:hover{
+    width: 130px;
+    transform: rotate(180deg);
 }
 
 .materia-container button{
@@ -311,10 +348,18 @@
     font-family: 'Poppins';
     font-weight: bold;
     background-color: #042D6F;
-    border-style: none;
+    border-style: solid;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: #429BB6;
     width: 270px;
     padding: 12px;
     margin-top: 20px;
+}
+
+.materia-container button:hover{
+    background-color: #01183d;
+    cursor: pointer;
 }
 
 /*FOOTER*/

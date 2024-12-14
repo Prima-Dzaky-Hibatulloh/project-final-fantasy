@@ -45,11 +45,12 @@ p{
 .card-container{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    align-items: start;
+    justify-items: center;
     gap: 20px;
 }
 
 .character-card{
-    width: 150px;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
@@ -58,53 +59,100 @@ p{
     box-shadow: 0 4px 4px #BC9369;
 }
 
+.cloud:hover .p1{
+    width: 150px;
+}
+
 .barret{
     box-shadow: 0 4px 4px #150C07;
+}
+
+.barret:hover .p2{
+    width: 150px;
 }
 
 .tifa{
     box-shadow: 0 4px 4px #652318;
 }
 
+.tifa:hover .p3{
+    width: 150px;
+}
+
 .aerith{
     box-shadow: 0 4px 4px #B8737E;
+}
+
+.aerith:hover .p4{
+    width: 150px;
 }
 
 .red{
     box-shadow: 0 4px 4px #531510;
 }
 
+.red:hover .p5{
+    width: 150px;
+}
+
 .yuffie{
     box-shadow: 0 4px 4px #465325;
+}
+
+.yuffie:hover .p6{
+    width: 150px;
 }
 
 .cid{
     box-shadow: 0 4px 4px #272834;
 }
 
+.p7{
+    width: 81px;
+    height: 120px;
+}
+
+.cid:hover .p7{
+    width: 111px;
+    height: 150px;
+}
+
 .vincent{
     box-shadow: 0 4px 4px #60201C;
+}
+
+.vincent:hover .p8{
+    width: 150px;
 }
 
 .sephiroth{
     box-shadow: 0 4px 4px #604F43;
 }
 
+.sephiroth:hover .p9{
+    width: 150px;
+}
+
 .cait{
     box-shadow: 0 4px 4px #652318;
 }
 
+.cait:hover .p10{
+    width: 150px;
+}
+
 img{
+    padding: 12px;
     width: 120px;
 }
 
-button{
+button {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
     color: #fff;
-    font-family: 'Caudex';
-    font-weight: bold;
     background-color: #042D6F;
     border-style: none;
-    width: 150px;
-    padding: 10px;
-    margin-top: 20px;
+    border-radius: 5px;
+    padding: 7px 12px;
 }

@@ -72,6 +72,7 @@ body {
 .container input[type="text"], input[type="password"] {
     width: 407px;
     height: 30px;
+    color: #fff;
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
@@ -89,6 +90,10 @@ body {
     width: 228px;
     padding: 7px;
     cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #b37511;
 }
 
 .container .reset{
@@ -128,7 +133,7 @@ body {
 .success h1{
     color: #fff;
     font-family: 'Alegreya';
-    padding-top: 14px;
+    padding-top: 40px;
     margin: 0;
 }
 

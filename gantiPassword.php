@@ -64,6 +64,12 @@
     <h1>Data Berhasil Diubah</h1>
     <button id="closeAlert" type="button">OK</button>
     </div>
+    
+    <div id="alertFail" class="fail hidden">
+    <h1>INVALID</h1>
+    <p id="alertMessage" style="color: #fff; font-size: 20px;">Password Tidak Sesuai</p>
+    <button id="closeAlert" type="button">Back</button>
+    </div>
 
     <!--ALERT JS-->
     <script>
@@ -77,6 +83,12 @@
         function regisSucces(){
             custAlert.classList.remove('hidden');
         }
+
+        function regisFail(){
+            alertMessage.textContent = "Konfirmasi Password Salah";
+            failAlert.classList.remove('hidden');
+        }
+
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){
             custAlert.classList.add('hidden')

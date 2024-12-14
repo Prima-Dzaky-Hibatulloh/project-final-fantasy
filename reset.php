@@ -57,7 +57,8 @@
     </div>
     
     <div id="alertFail" class="fail hidden">
-    <h1>INVALID PASSWORD</h1>
+    <h1>INVALID</h1>
+    <p style="color: #fff; font-size: 20px;">Username atau Password salah</p>
     <button id="closeAlert" type="button">Back</button>
     </div>
 

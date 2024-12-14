@@ -82,7 +82,7 @@
         <section class="login-section">
         <form method="POST" action="login.php">
             <label>Username</label><br>
-            <input type="text" name="username" required><br>
+            <input type="text" name="username" required><br><br>
             <label>Password</label><br>
             <input type="password" name="password" required><br>
             <input type="checkbox" name="remember_me" value="1" 
@@ -97,7 +97,8 @@
 
     <!--ALERT-->
     <div id="alertFail" class="fail hidden">
-    <h1>INVALID USERNAME OR PASSWORD </h1>
+    <h1>INVALID</h1>
+    <p style="color: #fff; font-size: 20px;">Username atau Password salah</p>
     <button id="closeAlert" type="button">Back</button>
     </div>
 

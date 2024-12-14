@@ -40,6 +40,8 @@ p{
 
 .card-container{
     display: grid;
+    align-items: start;
+    justify-items: center;
     grid-template-columns: auto auto auto;
     gap: 20px;
 }
@@ -54,36 +56,72 @@ p{
     border-color: #888853;
 }
 
+.grassland:hover .p1{
+    width: 500px;
+}
+
 .underjunon{
     border-color: #CCA293;
+}
+
+.underjunon:hover .p2{
+    width: 500px;
 }
 
 .junon{
     border-color: #AC6129;
 }
 
+.junon:hover .p3{
+    width: 500px;
+}
+
 .corel{
     border-color: #AAB9E2;
+}
+
+.corel:hover .p4{
+    width: 500px;
 }
 
 .gold{
     border-color: #E2D928;
 }
 
+.gold:hover .p5{
+    width: 500px;
+}
+
 .kalm{
     border-color: #B89168;
+}
+
+.kalm:hover .p6{
+    width: 500px;
 }
 
 .mythrill{
     border-color: #148EB8;
 }
 
+.mythrill:hover .p7{
+    width: 500px;
+}
+
 .shinra{
     border-color: #00A123;
 }
 
+.shinra:hover .p8{
+    width: 500px;
+}
+
 .costa{
     border-color: #DCB687;
+}
+
+.costa:hover .p9{
+    width: 500px;
 }
 
 img{
@@ -91,13 +129,12 @@ img{
     width: 300px;
 }
 
-button{
+button {
+    position: absolute;
+    left: 10px;
     color: #fff;
-    font-family: 'Caudex';
-    font-weight: bold;
     background-color: #042D6F;
     border-style: none;
-    width: 150px;
-    padding: 10px;
-    margin-top: 20px;
+    border-radius: 5px;
+    padding: 7px 12px;
 }

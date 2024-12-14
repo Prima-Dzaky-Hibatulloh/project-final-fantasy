@@ -78,7 +78,8 @@
     </div>
     
     <div id="alertFail" class="fail hidden">
-    <h1>INVALID PASSWORD</h1>
+    <h1>INVALID</h1>
+    <p id="alertMessage" style="color: #fff; font-size: 20px;">Password Tidak Sesuai</p>
     <button id="closeAlert" type="button">Back</button>
     </div>
 
@@ -87,6 +88,7 @@
         const successAlert = document.getElementById('alertSuccess');
         const failAlert = document.getElementById('alertFail');
         const closeAlert = document.getElementById('closeAlert');
+        const alertMessage = document.getElementById('alertMessage');
         
         //Kalau Berhasil
         <?php if($succes == true){ ?>
@@ -96,9 +98,18 @@
             regisSuccess();
         <?php } ?>
 
-        //Kalau Gagal
+        //Kalau Gagal (Password tidak sesuai regex)
         <?php if($err3 == true){ ?>
             function regisFail(){
+                failAlert.classList.remove('hidden');
+            }
+            regisFail();
+        <?php } ?>
+
+        //Kalau Gagal (Konfirmasi password tidak sesuai)
+        <?php if($err3 == true){ ?>
+            function regisFail(){
+                alertMessage.textContent = "Konfirmasi Password Salah";
                 failAlert.classList.remove('hidden');
             }
             regisFail();
