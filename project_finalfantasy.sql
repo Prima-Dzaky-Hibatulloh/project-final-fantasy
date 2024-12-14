@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2024 at 02:52 AM
+-- Generation Time: Dec 14, 2024 at 07:59 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -52,6 +52,53 @@ INSERT INTO `account` (`id`, `email`, `username`, `password`, `created_at`, `coo
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `combine`
+--
+
+CREATE TABLE `combine` (
+  `id` int(11) NOT NULL,
+  `materia1_id` int(11) NOT NULL,
+  `materia2_id` int(11) NOT NULL,
+  `effect` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `combine`
+--
+
+INSERT INTO `combine` (`id`, `materia1_id`, `materia2_id`, `effect`) VALUES
+(1, 1, 3, 'Memulihkan 5% MP dari damage Bahamut.'),
+(2, 1, 5, 'Memulihkan 3% MP dari total damage yang diberikan oleh Fire.'),
+(3, 1, 2, 'Memulihkan 3% MP dari target yang berhasil dicuri.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `materia`
+--
+
+CREATE TABLE `materia` (
+  `id` int(11) NOT NULL,
+  `name` varchar(90) NOT NULL,
+  `category` enum('support','magic','command','summon','complete') NOT NULL,
+  `description` text NOT NULL,
+  `picture` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `materia`
+--
+
+INSERT INTO `materia` (`id`, `name`, `category`, `description`, `picture`) VALUES
+(1, 'MP Absorption', 'support', 'Allows you to recover MP when unleashing an attack of the linked materia\'s type.', 'asset-materia/blue.png'),
+(2, 'Steal', 'command', 'grants the user to execute the battle command: Steal.', 'asset-materia/yellow.png'),
+(3, 'Bahamut', 'summon', 'It summons Bahamut, a dragon whose non-elemental magic attacks deal major damage to enemies.', 'asset-materia/red.png'),
+(4, 'ATB Stagger', 'complete', 'It increases a character\'s ATB gauge when staggering an enemy.', 'asset-materia/purple.png'),
+(5, 'Fire', 'magic', 'provide the user Fire Fire-elemental spells.', 'asset-materia/green.png');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `role`
 --
 
@@ -80,6 +127,20 @@ ALTER TABLE `account`
   ADD KEY `role_id` (`role_id`);
 
 --
+-- Indexes for table `combine`
+--
+ALTER TABLE `combine`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `materia1_id` (`materia1_id`),
+  ADD KEY `materia2_id` (`materia2_id`);
+
+--
+-- Indexes for table `materia`
+--
+ALTER TABLE `materia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `role`
 --
 ALTER TABLE `role`
@@ -96,6 +157,18 @@ ALTER TABLE `account`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `combine`
+--
+ALTER TABLE `combine`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `materia`
+--
+ALTER TABLE `materia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
@@ -110,6 +183,13 @@ ALTER TABLE `role`
 --
 ALTER TABLE `account`
   ADD CONSTRAINT `account_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
+
+--
+-- Constraints for table `combine`
+--
+ALTER TABLE `combine`
+  ADD CONSTRAINT `combine_ibfk_1` FOREIGN KEY (`materia1_id`) REFERENCES `materia` (`id`),
+  ADD CONSTRAINT `combine_ibfk_2` FOREIGN KEY (`materia2_id`) REFERENCES `materia` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
