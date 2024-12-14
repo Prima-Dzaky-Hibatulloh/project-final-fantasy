@@ -36,17 +36,19 @@
     <div class="table-section">
         <table>
             <tr>
+                <th>id</th>
                 <th>Username</th>
-                <th>Tanggal Daftar</th>
                 <th>Email</th>
+                <th>Tanggal Daftar</th>
                 <th>Action</th>
             </tr>
             <?php if (count($data) > 0){
                 foreach ($data as $akun) { ?>
                     <tr>
+                        <td><?= $akun['id']; ?></td>
                         <td><?= $akun['username']; ?></td>
-                        <td><?= $akun['created_at']; ?></td>
                         <td><?= $akun['email']; ?></td>
+                        <td><?= $akun['created_at']; ?></td>
                         <td>
                             <a href="role.php?username=<?= $akun['username']; ?>"><button>Admin</button></a>
                             <a href="hapus.php?username=<?= $akun['username']; ?>"><button>Delete</button></a>
