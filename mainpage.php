@@ -64,13 +64,13 @@
             </div>
             <div class="materia-card materia-kuning">
                 <img src="asset-materia/yellow.png">
-                <h4>CHAKRA</h4>
-                <p>Dapat dipasang pada Senjata untuk menggunakan perintah Chakra.</p>
+                <h4>STEAL</h4>
+                <p>Memberi pengguna untuk menjalankan perintah pertempuran: Mencuri (Steal).</p>
             </div>
             <div class="materia-card materia-hijau">
                 <img src="asset-materia/green.png">
-                <h4>EMPOWERMENT</h4>
-                <p>Meningkatkan serangan fisik dan sihir saat dipasang pada Senjata atau Armor.</p>
+                <h4>FIRE</h4>
+                <p>Digunakan untuk memberikan mantra elemen Api (Fire) kepada pengguna.</p>
             </div>
             <div class="materia-card materia-biru">
                 <img src="asset-materia/blue.png">

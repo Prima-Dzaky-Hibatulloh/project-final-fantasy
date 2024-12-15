@@ -69,7 +69,7 @@
     <!--ALERT-->
     <div id="alertCust" class="success hidden">
     <h1>Data Berhasil Diubah</h1>
-    <button id="closeAlert" type="button">OK</button>
+    <a href="logout.php"><button id="closeAlert" type="button">OK</button></a>
     </div>
 
     <div id="alertFail" class="fail hidden">
@@ -91,7 +91,7 @@
         
         <?php if ($err2 == true) { ?>
             function regisFail(){
-            alertMessage.textContent = "Password tidak memenuhi syarat!";
+            alertMessage.textContent = "Password Terlalu Pendek";
             failAlert.classList.remove('hidden');
             }
             regisFail();
@@ -108,7 +108,6 @@
         function regisSucces(){
             custAlert.classList.remove('hidden');
         }
-
 
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){

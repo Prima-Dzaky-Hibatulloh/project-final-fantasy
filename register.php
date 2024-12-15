@@ -76,7 +76,7 @@
     
     <div id="alertFail" class="fail hidden">
     <h1>INVALID</h1>
-    <p id="alertMessage" style="color: #fff; font-size: 20px;">Password Tidak Sesuai</p>
+    <p id="alertMessage" style="color: #fff; font-size: 20px;">Password Terlalu Pendek</p>
     <button id="closeAlert" type="button">Back</button>
     </div>
 

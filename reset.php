@@ -5,6 +5,10 @@
     $err = false;
     $succes = false;
 
+    if (!isset($_SESSION['sesi_username'])) {
+        header("Location:login.php");
+    }
+
     if (isset($_POST['submit'])) {
         $user = $_POST['username'];
         $email = $_POST['email'];

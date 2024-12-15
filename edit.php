@@ -60,7 +60,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="css/edit.css?v=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -96,16 +96,18 @@
 
     <div id="alertFail" class="fail hidden">
     <h1>INVALID</h1>
-    <p id="alertMessage" style="color: #fff; font-size: 20px;">Username atau Email sudah terdaftar</p>
-    <button id="closeAlert" type="button">Back</button>
+    <p style="color: #fff; font-size: 20px;">Username atau Email sudah terdaftar</p>
+    <button id="close" type="button">Back</button>
     </div>
 
     <!--ALERT JS-->
     <script>
         const custAlert = document.getElementById('alertCust');
-        const failAlert = document.getElementByID('alertFail');
+        const failAlert = document.getElementById('alertFail');
         const closeAlert = document.getElementById('closeAlert');
-
+        const close = document.getElementById('close');
+        
+        //Alert Berhasil
         <?php if($succes == true) { ?>
             function regisSuccess(){
                 custAlert.classList.remove('hidden');
@@ -114,13 +116,20 @@
         <?php } ?>
         
         //Alert Gagal
-        function regisFail(){
+        <?php if($err == true) { ?>
+            function regisFail(){
                 failAlert.classList.remove('hidden');
-        }
+            }
+            regisFail();
+        <?php } ?>
 
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){
             custAlert.classList.add('hidden')
+        })
+
+        close.addEventListener("click", function(){
+            failAlert.classList.add('hidden')
         })
     </script>
 </body>
