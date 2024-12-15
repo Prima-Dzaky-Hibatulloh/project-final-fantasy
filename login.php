@@ -90,7 +90,6 @@
             <label for="remember_me">Remember me</label>
             <a href="reset.php" class="reset">Forgot Password?</a><br><br>
             <input type="submit" name="submit" value="Login"><br>
-            
         </section>
         <p>Belum Punya Akun? <a href="register.php">Registrasi</a></p>
     </div>

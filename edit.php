@@ -94,9 +94,16 @@
     <button id="closeAlert">OK</button>
     </div>
 
+    <div id="alertFail" class="fail hidden">
+    <h1>INVALID</h1>
+    <p id="alertMessage" style="color: #fff; font-size: 20px;">Username atau Email sudah terdaftar</p>
+    <button id="closeAlert" type="button">Back</button>
+    </div>
+
     <!--ALERT JS-->
     <script>
         const custAlert = document.getElementById('alertCust');
+        const failAlert = document.getElementByID('alertFail');
         const closeAlert = document.getElementById('closeAlert');
 
         <?php if($succes == true) { ?>
@@ -105,6 +112,11 @@
             }
             regisSuccess();
         <?php } ?>
+        
+        //Alert Gagal
+        function regisFail(){
+                failAlert.classList.remove('hidden');
+        }
 
         //button buat balik di alert
         closeAlert.addEventListener("click", function(){
